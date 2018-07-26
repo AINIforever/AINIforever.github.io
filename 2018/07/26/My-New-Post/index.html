@@ -22,7 +22,7 @@
 <meta property="og:site_name" content="Hexo">
 <meta property="og:description" content="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql版本说明之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。版本： pyt">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-26T02:38:48.483Z">
+<meta property="og:updated_time" content="2018-07-26T14:45:55.327Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="My New Post">
 <meta name="twitter:description" content="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql版本说明之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。版本： pyt">
@@ -73,7 +73,7 @@
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
         scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: 
+        search: false
     }
 </script>
 
@@ -294,6 +294,7 @@
       
           
         <h1 id="Windows下Django-Python3-使用Mysqlclient配置并连接Mysql"><a href="#Windows下Django-Python3-使用Mysqlclient配置并连接Mysql" class="headerlink" title="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql"></a>Windows下Django(Python3)使用Mysqlclient配置并连接Mysql</h1><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><p>之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。<br>版本： python 3.6.1， django 2.0.7</p>
+<a id="more"></a>
 <h3 id="下载MysqlClient扩展包"><a href="#下载MysqlClient扩展包" class="headerlink" title="下载MysqlClient扩展包"></a>下载MysqlClient扩展包</h3><p>可以访问<a href="https://www.lfd.uci.edu/~gohlke/pythonlibs/" target="_blank" rel="noopener">LFD的开源网站</a>,很多windows下的python扩展包都可以找到，建议mark一下。找到mysqlclient‑1.3.13‑cp36‑cp36m‑win_amd64.whl，点击下载。<br>执行cmd命令：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install mysqlclient‑<span class="number">1.3</span><span class="number">.13</span>‑cp36‑cp36m‑win_amd64.whl</span><br></pre></td></tr></table></figure></p>
 <p>即安装好了Mysqlclient。</p>
 <h3 id="创建一个django项目"><a href="#创建一个django项目" class="headerlink" title="创建一个django项目"></a>创建一个django项目</h3><p>django的环境搭建这里就不多说了，python下执行以下命令创建一个django项目：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">django-admin.py startproject mysqlTest</span><br></pre></td></tr></table></figure></p>
@@ -317,7 +318,7 @@
         <p><span>本文标题:</span><a href="/2018/07/26/My-New-Post/">My New Post</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
         <p><span>发布时间:</span>2018-07-26, 10:30:44</p>
-        <p><span>最后更新:</span>2018-07-26, 10:38:48</p>
+        <p><span>最后更新:</span>2018-07-26, 22:45:55</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/26/My-New-Post/" title="My New Post">http://www.nia520.top/2018/07/26/My-New-Post/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2018/07/26/My-New-Post/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
