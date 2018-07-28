@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .  然后关联远程仓库：  git remote add origin [your URL]  再拉取远程代码：  git pull origin master  提交：  git push origin master  如果增加了未有">
+<meta name="description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .">
 <meta name="keywords" content="Git">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git代码提交">
 <meta property="og:url" content="http://www.nia520.top/2018/07/28/Git代码提交/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .  然后关联远程仓库：  git remote add origin [your URL]  再拉取远程代码：  git pull origin master  提交：  git push origin master  如果增加了未有">
+<meta property="og:description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-07-28T04:14:33.774Z">
+<meta property="og:updated_time" content="2018-07-28T04:18:25.043Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Git代码提交">
-<meta name="twitter:description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .  然后关联远程仓库：  git remote add origin [your URL]  再拉取远程代码：  git pull origin master  提交：  git push origin master  如果增加了未有">
+<meta name="twitter:description" content="第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：  git initgit add .">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -79,7 +79,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -199,9 +201,9 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                      <a class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/268d78c34831">简书</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/AINIforever">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -309,6 +311,7 @@
 <blockquote>
 <p>git init<br>git add .</p>
 </blockquote>
+<a id="more"></a>
 <p>然后关联远程仓库：</p>
 <blockquote>
 <p>git remote add origin [your URL]</p>
@@ -375,7 +378,7 @@
         <p><span>本文标题:</span><a href="/2018/07/28/Git代码提交/">Git代码提交</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
         <p><span>发布时间:</span>2018-07-28, 12:07:20</p>
-        <p><span>最后更新:</span>2018-07-28, 12:14:33</p>
+        <p><span>最后更新:</span>2018-07-28, 12:18:25</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/28/Git代码提交/" title="Git代码提交">http://www.nia520.top/2018/07/28/Git代码提交/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2018/07/28/Git代码提交/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -567,6 +570,27 @@
 
 
 
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -593,6 +617,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

@@ -15,19 +15,19 @@
 
 
 
-<meta name="description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null  代码演示：12345678910111213141516//HashSetSet set1 = new HashSet();set1.add(&quot;">
+<meta name="description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null">
 <meta name="keywords" content="Java">
 <meta property="og:type" content="article">
 <meta property="og:title" content="HashSet与TreeSet浅析">
 <meta property="og:url" content="http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null  代码演示：12345678910111213141516//HashSetSet set1 = new HashSet();set1.add(&quot;">
+<meta property="og:description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/4484312-7e83582e8a5816c3.png">
-<meta property="og:updated_time" content="2018-07-28T04:13:45.067Z">
+<meta property="og:updated_time" content="2018-07-28T04:18:33.794Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="HashSet与TreeSet浅析">
-<meta name="twitter:description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null  代码演示：12345678910111213141516//HashSetSet set1 = new HashSet();set1.add(&quot;">
+<meta name="twitter:description" content="今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。 一. 区别： HastSet使用散列表进行存储，元素无序，允许为nullTreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null">
 <meta name="twitter:image" content="http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/4484312-7e83582e8a5816c3.png">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
@@ -81,7 +81,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -201,9 +203,9 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                      <a class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/268d78c34831">简书</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/AINIforever">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -311,6 +313,7 @@
 <h2 id="一-区别："><a href="#一-区别：" class="headerlink" title="一. 区别："></a>一. 区别：</h2><blockquote>
 <p>HastSet使用散列表进行存储，元素无序，允许为null<br>TreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null</p>
 </blockquote>
+<a id="more"></a>
 <p>代码演示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="string">"first"</span>);</span><br><span class="line">set1.add(<span class="string">"second"</span>);</span><br><span class="line">set1.add(<span class="string">"third"</span>);</span><br><span class="line">System.out.println(set1);</span><br><span class="line"><span class="comment">//输出结果：[third, first, second]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//TreeSet</span></span><br><span class="line">Set set2 = <span class="keyword">new</span> TreeSet();</span><br><span class="line">set2.add(<span class="string">"first"</span>);</span><br><span class="line">set2.add(<span class="string">"second"</span>);</span><br><span class="line">set2.add(<span class="string">"third"</span>);</span><br><span class="line">set2.add(<span class="string">"forth"</span>);</span><br><span class="line">System.out.println(set2);</span><br><span class="line"><span class="comment">//输出结果：[first,forth, second, third]</span></span><br></pre></td></tr></table></figure></p>
 <h2 id="二-有关对象的比较："><a href="#二-有关对象的比较：" class="headerlink" title="二. 有关对象的比较："></a>二. 有关对象的比较：</h2><p>相较于List，Set没有序列的概念，正如我们所学到的集合，具有非重复性。来看下列代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set is not sequencial,doesn't have positiion</span></span><br><span class="line">List list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line"><span class="comment">//about hashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="number">123</span>);</span><br><span class="line">set1.add(<span class="number">123</span>);<span class="comment">//have no use</span></span><br><span class="line">System.out.println(set1.size());</span><br><span class="line"><span class="comment">//输出结果：1</span></span><br></pre></td></tr></table></figure></p>
 <p>从上述代码可以看出，不能重复给HashSet加123这个整型元素，但是当我们添加的对象时，情况会有所不同。比如我们有如下这个Person类，并向HashSet中添加Person对象时：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pid;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> pid, String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.pid = pid;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[], args)</span></span>&#123;</span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">"abc"</span>));</span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">"abc"</span>));</span><br><span class="line">        <span class="comment">//now they are not actually the same</span></span><br><span class="line">        System.out.println(set1.size());</span><br><span class="line">        <span class="comment">//输出结果：2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
@@ -338,7 +341,7 @@
         <p><span>本文标题:</span><a href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
         <p><span>发布时间:</span>2018-07-28, 12:10:08</p>
-        <p><span>最后更新:</span>2018-07-28, 12:13:45</p>
+        <p><span>最后更新:</span>2018-07-28, 12:18:33</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2018/07/28/HashSet与TreeSet浅析/" title="HashSet与TreeSet浅析">http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -522,6 +525,27 @@
 
 
 
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -548,6 +572,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>

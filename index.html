@@ -79,7 +79,9 @@
 </script>
 
 
-    <script> yiliaConfig.jquery_ui = [false]; </script>
+    <script>
+        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
+    </script>
 
 
 
@@ -199,9 +201,9 @@
                 <section class="switch-part switch-part3">
                     <div id="js-friends">
                     
-                      <a class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                      <a class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/268d78c34831">简书</a>
                     
-                      <a class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                      <a class="main-nav-link switch-friends-link" href="https://github.com/AINIforever">GitHub</a>
                     
                       <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
                     
@@ -296,27 +298,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。</p>
+              <p>今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。</p>
 <h2 id="一-区别："><a href="#一-区别：" class="headerlink" title="一. 区别："></a>一. 区别：</h2><blockquote>
 <p>HastSet使用散列表进行存储，元素无序，允许为null<br>TreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null</p>
 </blockquote>
-<p>代码演示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="string">"first"</span>);</span><br><span class="line">set1.add(<span class="string">"second"</span>);</span><br><span class="line">set1.add(<span class="string">"third"</span>);</span><br><span class="line">System.out.println(set1);</span><br><span class="line"><span class="comment">//输出结果：[third, first, second]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//TreeSet</span></span><br><span class="line">Set set2 = <span class="keyword">new</span> TreeSet();</span><br><span class="line">set2.add(<span class="string">"first"</span>);</span><br><span class="line">set2.add(<span class="string">"second"</span>);</span><br><span class="line">set2.add(<span class="string">"third"</span>);</span><br><span class="line">set2.add(<span class="string">"forth"</span>);</span><br><span class="line">System.out.println(set2);</span><br><span class="line"><span class="comment">//输出结果：[first,forth, second, third]</span></span><br></pre></td></tr></table></figure></p>
-<h2 id="二-有关对象的比较："><a href="#二-有关对象的比较：" class="headerlink" title="二. 有关对象的比较："></a>二. 有关对象的比较：</h2><p>相较于List，Set没有序列的概念，正如我们所学到的集合，具有非重复性。来看下列代码：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//set is not sequencial,doesn't have positiion</span></span><br><span class="line">List list = <span class="keyword">new</span> ArrayList();</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line">list.add(<span class="number">123</span>);</span><br><span class="line"><span class="comment">//about hashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="number">123</span>);</span><br><span class="line">set1.add(<span class="number">123</span>);<span class="comment">//have no use</span></span><br><span class="line">System.out.println(set1.size());</span><br><span class="line"><span class="comment">//输出结果：1</span></span><br></pre></td></tr></table></figure></p>
-<p>从上述代码可以看出，不能重复给HashSet加123这个整型元素，但是当我们添加的对象时，情况会有所不同。比如我们有如下这个Person类，并向HashSet中添加Person对象时：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pid;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> pid, String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.pid = pid;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[], args)</span></span>&#123;</span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">"abc"</span>));</span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">"abc"</span>));</span><br><span class="line">        <span class="comment">//now they are not actually the same</span></span><br><span class="line">        System.out.println(set1.size());</span><br><span class="line">        <span class="comment">//输出结果：2</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>这里之所以认为先后添加的对象不重复，是因为<strong>默认的HashCode函数不会给两个对象赋予相同的hashCode值，而hashCode值不同，则不能认定为相同对象。</strong>至于HashCode函数是什么，让我们往下看。</p>
-<p>既然我们添加了两个属性一模一样的对象都不会被默认方法认定为重复，那有什么方法来改变这种情况呢？<br>大家都知道，所有的自定义类都继承于Object类，<strong>Object类中有equals方法，专门用来判断两个对象是否相等。</strong>讲到这里可能有同学会提出，我在Person类里重写一下equals方法是不是就行了呢？就像这样：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(object object)</span></span>&#123;</span><br><span class="line">        <span class="comment">//to determine the important attribute</span></span><br><span class="line">        Person p = (Person)object;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">this</span>.pid == p.pid);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>这样，当两个对象的pid相等时，就认为这两个对象重复，从而不会重复添加到HashSet里了？NONONO！这里就要回到我们刚才提到过的hashCode方法了。。。。呜呜呜呜，寝室断电了，而我又是个严格作息的好孩子，明天见吧（不过睡前先喝一杯牛奶啦）。</p>
-<hr>
-<p>好了，让我们继续。首先要弄明白为什么要有hashCode这个方法。试想一下，如果对于一个HashSet里的值，每尝试添加一个元素时，都要一一与已有元素作比较，调用equals方法，假设HashSet的size为n，则添加过程总共执行了$$m=1+2+3+…+n-1=(n-1)(n-2)/2$$次equals方法！这是非常耗时的，所以必须采取策略来减少equals方法的调用次数。而<strong>HashCode方法会根据对象的属性返回一个哈希码，HashSet把此哈希码转化成一个数组下标，来标记该对象的位置，如果该位置上的链表没有此元素，则代表当前HashSet中无此哈希码的对象，可以添加。如果该位置的链表里有元素，则此时通过HashCode已经无法判断这两个对象是否重复（此时成为conflict），此时再调用equals方法，进一步判断</strong>。HashCode工作原理如下：</p>
-<!-- ![HashCode工作原理](http://upload-images.jianshu.io/upload_images/4484312-7e83582e8a5816c3.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240) -->
-<img src="/2018/07/28/HashSet与TreeSet浅析/4484312-7e83582e8a5816c3.png" title="HashCode工作原理">
-<p>好了，我们知道，只有当两个对象发生conflict时，我们才调用equals方法来进行判断。那接下来让我们重载hashCode方法，完成最终的目的吧！<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;  </span><br><span class="line">    <span class="keyword">int</span> result = <span class="number">1</span>;  </span><br><span class="line">    result = prime * result + pid;  </span><br><span class="line">    result = prime * result + ((name == <span class="keyword">null</span>) ? <span class="number">0</span> : name.hashCode());  </span><br><span class="line">    <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure></p>
-<p>现在，简述一下完整的过程：<strong>当有新对象需要添加到HashSet中时，首先hashCode方法判断其hashCode是否已被标记，若未标记，则直接添加，否则，将其与HashSet中相同哈希码的元素用equals方法比较，最后确定是否为重复元素。</strong><br>用法：一般HashCode与equals方法控制的都是同一个属性，比如，当添加Person对象时，只要其pid相同，就认为不可重复添加：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@override</span></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pid;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> pid, String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.pid = pid;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">equals</span><span class="params">(object object)</span></span>&#123;</span><br><span class="line">        <span class="comment">//to determine the important attribute</span></span><br><span class="line">        Person p = (Person)object;</span><br><span class="line">        <span class="keyword">return</span> (<span class="keyword">this</span>.pid == p.pid);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">hashCode</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="keyword">final</span> <span class="keyword">int</span> prime = <span class="number">31</span>;  </span><br><span class="line">        <span class="keyword">int</span> result = <span class="number">1</span>;  </span><br><span class="line">        result = prime * result + pid;  <span class="comment">//note here we choose pid as our important attribute</span></span><br><span class="line">        <span class="keyword">return</span> result;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[], args)</span></span>&#123;</span><br><span class="line">        Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line"></span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">"abc"</span>));</span><br><span class="line">        set1.add(<span class="keyword">new</span> Person(<span class="number">1</span>,<span class="string">'abd'</span>));<span class="comment">//here we have oerride the hashCode() and equals(), and choose pid as important attribute.</span></span><br><span class="line">        </span><br><span class="line">        <span class="comment">//add the second object, it depends on whether they are the same</span></span><br><span class="line">        <span class="comment">//but when we override the equal method of the class Person, the JVM will know how to campare the two objects,</span></span><br><span class="line">        <span class="comment">//if the two objects are recognized as the same, it will not add the second one.</span></span><br><span class="line">        <span class="comment">//and we can override the hashCode method to select some diffrent objects instead of invoking equals method many times</span></span><br><span class="line">        </span><br><span class="line">        System.out.prinln(set1.size());</span><br><span class="line">        <span class="comment">//输出结果：1</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>有关HashSet的对象比较就到这里啦（好像有点啰嗦，见谅^_^）<br>下面看有关TreeSet：<br>TreeSet采用的比较方式是实现Campare接口，并重载campareTo方法，来比较两个对象是否相等：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">Person</span> <span class="keyword">implements</span> <span class="title">Camparable</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> pid;</span><br><span class="line">    String name;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="title">Person</span><span class="params">(<span class="keyword">int</span> pid, String name)</span></span>&#123;</span><br><span class="line">        <span class="keyword">super</span>();</span><br><span class="line">        <span class="keyword">this</span>.pid = pid;</span><br><span class="line">        <span class="keyword">this</span>.name = name;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@override</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">int</span> <span class="title">campareTo</span><span class="params">(object o)</span></span>&#123;</span><br><span class="line">        <span class="comment">//that means when their pid is the same, they are regarded as the same</span></span><br><span class="line">        Person p = (Person)o;</span><br><span class="line">        <span class="keyword">return</span> pid-p.pid;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>方法很简单，返回负值则代表当前对象小于比较对象，其他两种情况类推。<br>至于TreeSet的原理，也很简单，构建一个二叉树，节点的左子树比它大，右子树它他小。当新对象进入时，对每个节点进行比较，比节点大则进入左子树…这样，至多通过log2(n)次比较就能判断元素是否重复。</p>
-<h2 id="三、最后"><a href="#三、最后" class="headerlink" title="三、最后"></a>三、最后</h2><p>有关这两种数据结构，还有很多地方还没涉及。可能以后还会作补充，如果希望了解更多，这里给出了官方API的链接<br><a href="https://docs.oracle.com/javase/7/docs/api/java/util/HashSet.html" target="_blank" rel="noopener">HashSet</a>、<a href="https://docs.oracle.com/javase/7/docs/api/java/util/TreeSet.html" target="_blank" rel="noopener">TreeSet</a></p>
-<p><em>第一次写笔记，也是为数不多的使用markdown，希望自己能养成习惯，这里纯粹是个人分享，如有不对或不足的地方，请多多指正！</em></p>
-
+          
       
     </div>
     
@@ -329,6 +315,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2018/07/28/HashSet与TreeSet浅析/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -375,66 +365,11 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：</p>
+              <p>第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：</p>
 <blockquote>
 <p>git init<br>git add .</p>
 </blockquote>
-<p>然后关联远程仓库：</p>
-<blockquote>
-<p>git remote add origin [your URL]</p>
-</blockquote>
-<p>再拉取远程代码：</p>
-<blockquote>
-<p>git pull origin master</p>
-</blockquote>
-<p>提交：</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-<p>如果增加了未有文件（出现”nothing added to commit but untracked files present”错误），push前必须使用命令：</p>
-<blockquote>
-<p>git add 【your files】</p>
-</blockquote>
-<p>然后再：</p>
-<blockquote>
-<p>git commit -m “[add] your files”</p>
-</blockquote>
-<p>最后：</p>
-<blockquote>
-<p>git push -u origin master</p>
-</blockquote>
-<p>如果自己是第三版本（即在修改第一版本时有人提前提交代码）：<br>则需先保存本地修改，放到临时栈：</p>
-<blockquote>
-<p>git stash</p>
-</blockquote>
-<p>再拉去远程仓库的最新版本：</p>
-<blockquote>
-<p>git pull origin master</p>
-</blockquote>
-<p>然后再将自己的本地修改从栈中弹出：</p>
-<blockquote>
-<p>git stash pop</p>
-</blockquote>
-<p>最后，对自己所修改的文件作备注说明：</p>
-<blockquote>
-<p>git commit -a</p>
-</blockquote>
-<p>此时窗口为类似于vim的编辑窗口，使用vi常用命令进入编辑模式：</p>
-<blockquote>
-<p>i</p>
-</blockquote>
-<p>做好修改后，保存修改：</p>
-<blockquote>
-<ol>
-<li>‘ctrl’+’o’</li>
-<li>:wq</li>
-</ol>
-</blockquote>
-<p>就可以提交代码了：</p>
-<blockquote>
-<p>git push origin master</p>
-</blockquote>
-
+          
       
     </div>
     
@@ -447,6 +382,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2018/07/28/Git代码提交/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
@@ -647,6 +586,27 @@
 
 
 
+    <script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+    tex2jax: {
+        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+        processEscapes: true,
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    }
+});
+
+MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for(i=0; i < all.length; i += 1) {
+        all[i].SourceElement().parentNode.className += ' has-jax';                 
+    }       
+});
+</script>
+
+<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+
 <div class="scroll" id="scroll">
     <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
     <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
@@ -673,6 +633,23 @@
         }
     
 </script>
+
+    <script>
+        var originTitle = document.title;
+        var titleTime;
+        document.addEventListener("visibilitychange", function() {
+            if (document.hidden) {
+                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
+                clearTimeout(titleTime);
+            }
+            else {
+                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
+                titleTime = setTimeout(function() {
+                    document.title = originTitle;
+                }, 2000);
+            }
+        })
+    </script>
 
 <script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
 </script>
