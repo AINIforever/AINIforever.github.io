@@ -301,8 +301,13 @@
         <h1 id="线性规划（Linear-Programming）"><a href="#线性规划（Linear-Programming）" class="headerlink" title="线性规划（Linear Programming）"></a>线性规划（Linear Programming）</h1><h2 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h2><p>线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。<br>Matlab标准形式：</p>
 <p>$$ min \quad  $$</p>
 <p>$$<br>s.t \quad \lbrace{ Ax &lt; b,<br>Aeq * x = beq,<br>lb \leq x \leq ub\rbrace}<br>$$<br>其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b 、beq为适当维数的列向量</p>
+<p>Matlab: [x,fval]=linprog(c,A,b,Aeq,beq,LB,UB,X0,OPTIONS) </p>
 <p>凸集的概念（图解）：<br><img src="/2019/01/09/Math-Model/tuji.png" title="凸集的概念"></p>
-<h2 id="运输问题"><a href="#运输问题" class="headerlink" title="运输问题"></a>运输问题</h2><h2 id="指派问题"><a href="#指派问题" class="headerlink" title="指派问题"></a>指派问题</h2><h2 id="对偶理论与灵敏度分析"><a href="#对偶理论与灵敏度分析" class="headerlink" title="对偶理论与灵敏度分析"></a>对偶理论与灵敏度分析</h2><h2 id="投资的收益和风险"><a href="#投资的收益和风险" class="headerlink" title="投资的收益和风险"></a>投资的收益和风险</h2>
+<h2 id="运输问题"><a href="#运输问题" class="headerlink" title="运输问题"></a>运输问题</h2><p>产销平衡问题，典型的线性规划问题</p>
+<h2 id="指派问题"><a href="#指派问题" class="headerlink" title="指派问题"></a>指派问题</h2><p>某商品有m 个产地、n个销地，各产地的产量分别为a<sub>1</sub>,a<sub>2</sub>,…,a<sub>m</sub>,各销地的 需求量分别为b<sub>1</sub>,b<sub>2</sub>,…,b<sub>n</sub>。若该商品由i产地运到 j 销地的单位运价为c<sub>ij</sub> ，问应该如何调 运才能使总运费最省？ </p>
+<p>解：引入变量x<sub>ij</sub> ，其取值为由i产地运往 j 销地的该商品数量，数学模型为</p>
+<p>$$ min \quad \sum_{i=1}^m \sum_{j=1}^n  {c<sub>ij</sub> x<sub>ij</sub>} $$</p>
+<h2 id="对偶理论与灵敏度分析"><a href="#对偶理论与灵敏度分析" class="headerlink" title="对偶理论与灵敏度分析"></a>对偶理论与灵敏度分析</h2><h2 id="投资的收益和风险"><a href="#投资的收益和风险" class="headerlink" title="投资的收益和风险"></a>投资的收益和风险</h2>
       
     </div>
     
