@@ -24,7 +24,8 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/tuji.png">
 <meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/HungarianMethod.png">
-<meta property="og:updated_time" content="2019-01-10T04:38:33.719Z">
+<meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/solution1.jpg">
+<meta property="og:updated_time" content="2019-01-10T06:16:56.092Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Math Model">
 <meta name="twitter:description" content="线性规划（Linear Programming）线性规划线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。Matlab标准形式： $$ min \quad  $$ $$s.t \quad \lbrace{ Ax &amp;lt; b,Aeq * x = beq,lb \leq x \leq ub\rbrace}$$其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b">
@@ -308,6 +309,7 @@
         <h1 id="线性规划（Linear-Programming）"><a href="#线性规划（Linear-Programming）" class="headerlink" title="线性规划（Linear Programming）"></a>线性规划（Linear Programming）</h1><h2 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h2><p>线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。<br>Matlab标准形式：</p>
 <p>$$ min \quad  $$</p>
 <p>$$<br>s.t \quad \lbrace{ Ax &lt; b,<br>Aeq * x = beq,<br>lb \leq x \leq ub\rbrace}<br>$$<br>其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b 、beq为适当维数的列向量</p>
+<a id="more"></a>
 <p>Matlab: [x,fval]=linprog(c,A,b,Aeq,beq,LB,UB,X0,OPTIONS) </p>
 <p>凸集的概念（图解）：<br><img src="/2019/01/09/Math-Model/tuji.png" title="凸集的概念"></p>
 <h2 id="运输问题"><a href="#运输问题" class="headerlink" title="运输问题"></a>运输问题</h2><p>某商品有m 个产地、n个销地，各产地的产量分别为a<sub>1</sub>,a<sub>2</sub>,…,a<sub>m</sub>,各销地的 需求量分别为b<sub>1</sub>,b<sub>2</sub>,…,b<sub>n</sub>。若该商品由i产地运到 j 销地的单位运价为c<sub>ij</sub> ，问应该如何调 运才能使总运费最省？ </p>
@@ -367,18 +369,71 @@
 <ol>
 <li>行规约与列规约后：</li>
 </ol>
-<p>$$<br>\left[<br>\begin{matrix}<br>5 &amp; 0^<em> &amp; 2 &amp; 0 &amp; 2 \\<br>2 &amp; 3 &amp; 0 &amp; 0^</em> &amp; 0 \\<br>0^<em> &amp; 10 &amp; 5 &amp; 7 &amp; 5 \\<br>9 &amp; 8 &amp; 0^</em> &amp; 0 &amp; 4 \\<br>0 &amp; 6 &amp; 3 &amp; 6 &amp; 2<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>\left[<br>\begin{matrix}<br>5 &amp; 0^1 &amp; 2 &amp; 0 &amp; 2 \\<br>2 &amp; 3 &amp; 0 &amp; 0^1 &amp; 0 \\<br>0^1 &amp; 10 &amp; 5 &amp; 7 &amp; 5 \\<br>9 &amp; 8 &amp; 0^1 &amp; 0 &amp; 4 \\<br>0 &amp; 6 &amp; 3 &amp; 6 &amp; 2<br>\end{matrix}<br>\right]<br>$$</p>
 <ol start="2">
-<li>试指派：尝试找出n个不同行不同列的零元素(尝试的0用*做上标标记)，且不能用贪心法，要用回溯，此矩阵无法找出</li>
+<li>试指派：尝试找出n个不同行不同列的零元素(尝试的0用1做上标标记)，且不能用贪心法，要用回溯，此矩阵无法找出</li>
 <li>画盖0线执行以下步骤：<br>1) 对未标记的0元素所在行打√<br>2) 对√行中0元素所在的列打√<br>3) 对√列中选中的0元素所在行打√<br>重复2)、3)直到不出现新√<br>4) 用直线盖住未打√的行和列</li>
 <li>更新矩阵：取盖0线未覆盖的最小元素，√行减去此元素，√列加上此元素<br>重复画盖0线与更新矩阵，直到试指派成功。</li>
 </ol>
 <p>在此问题中，第三行和第五行为打√行，第一列为打√列，最小元素为2，更新矩阵后：</p>
-<p>$$<br>\left[<br>\begin{matrix}<br>7 &amp; 0^<em> &amp; 2 &amp; 0 &amp; 2 \\<br>4 &amp; 3 &amp; 0 &amp; 0^</em> &amp; 0 \\<br>0^<em> &amp; 8 &amp; 3 &amp; 5 &amp; 3 \\<br>11 &amp; 8 &amp; 0^</em> &amp; 0 &amp; 4 \\<br>0 &amp; 4 &amp; 1 &amp; 4 &amp; 0^*<br>\end{matrix}<br>\right]<br>$$</p>
+<p>$$<br>\left[<br>\begin{matrix}<br>7 &amp; 0^1 &amp; 2 &amp; 0 &amp; 2 \\<br>4 &amp; 3 &amp; 0 &amp; 0^1 &amp; 0 \\<br>0^1 &amp; 8 &amp; 3 &amp; 5 &amp; 3 \\<br>11 &amp; 8 &amp; 0^1 &amp; 0 &amp; 4 \\<br>0 &amp; 4 &amp; 1 &amp; 4 &amp; 0^1<br>\end{matrix}<br>\right]<br>$$</p>
 <p>按图中标记，试指派成功，则最优解为：</p>
 <p>$$<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\<br>2 &amp; 4 &amp; 1 &amp; 3 &amp; 5<br>\end{matrix}<br>\right)<br>$$</p>
 <p>总结一下，匈牙利的算法如下流程图：<br><img src="/2019/01/09/Math-Model/HungarianMethod.png" title="匈牙利算法"></p>
-<h2 id="对偶理论与灵敏度分析"><a href="#对偶理论与灵敏度分析" class="headerlink" title="对偶理论与灵敏度分析"></a>对偶理论与灵敏度分析</h2><h2 id="投资的收益和风险"><a href="#投资的收益和风险" class="headerlink" title="投资的收益和风险"></a>投资的收益和风险</h2>
+<h2 id="对偶理论与灵敏度分析"><a href="#对偶理论与灵敏度分析" class="headerlink" title="对偶理论与灵敏度分析"></a>对偶理论与灵敏度分析</h2><p>原问题:<br>$$ min \quad c^Tx \quad \quad s.t. \quad Ax = b \quad x \geq 0 $$<br>把其中的等式约束变成不等式约束，可得：<br>$$ min \quad c^Tx \quad \quad s.t. \quad<br>\left[<br>\begin{matrix}<br>A \\<br>-A<br>\end{matrix}<br>\right]x \geq<br>\left[<br>\begin{matrix}<br>b \\<br>-b<br>\end{matrix}<br>\right],\quad x \geq 0<br>$$<br>它的对偶问题是：<br>$$ max \quad b^Ty \quad \quad s.t. \quad A^Ty \leq c $$</p>
+<p>对偶理论：若x，y分别是原问题和对偶问题的最优解，则<br>$$ y^T(Ax-b) \quad = \quad 0 , \quad<br>x^T(A^T y-c) \quad = \quad 0<br>$$</p>
+<p>灵敏度分析：略</p>
+<h2 id="投资的收益和风险"><a href="#投资的收益和风险" class="headerlink" title="投资的收益和风险"></a>投资的收益和风险</h2><ol>
+<li>问题描述：<br>市场上有n中资产s<sub>i</sub>,(i=1,2,…,n)可以选择，现用数额为M的相当大的资金作为一个时期的投资。这n种资产在这一时期内购买s<sub>i</sub>的平均收益率为r<sub>i</sub>，风险损失率为q<sub>i</sub>，投资越分散，总的风险越少，总体风险可用s<sub>i</sub>中最大的一个风险来衡量。<br>购买s<sub>i</sub>是要付交易费，费率p<sub>i</sub>，当购买额不超过定值u<sub>i</sub>，交易费按u<sub>i</sub>算，另假定银行存款利率为r<sub>0</sub>。(r<sub>0</sub> = 5%)<br>有下表：</li>
+</ol>
+<table>
+<thead>
+<tr>
+<th>s<sub>i</sub></th>
+<th>r<sub>i</sub></th>
+<th>p<sub>i</sub></th>
+<th>q<sub>i</sub></th>
+<th>u<sub>i</sub></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>s<sub>1</sub></td>
+<td>28</td>
+<td>2.5</td>
+<td>1</td>
+<td>103</td>
+</tr>
+<tr>
+<td>s<sub>2</sub></td>
+<td>21</td>
+<td>1.5</td>
+<td>2</td>
+<td>198</td>
+</tr>
+<tr>
+<td>s<sub>3</sub></td>
+<td>23</td>
+<td>5.5</td>
+<td>4.5</td>
+<td>52</td>
+</tr>
+<tr>
+<td>s<sub>4</sub></td>
+<td>25</td>
+<td>2.6</td>
+<td>6.5</td>
+<td>40</td>
+</tr>
+</tbody>
+</table>
+<p>设计一种组合方案，使净收益尽可能大，总体风险尽可能小。</p>
+<ol start="2">
+<li>思路：<br>1) 固定风险，优化收益<figure class="highlight matlab"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">clc,clear </span><br><span class="line">a=<span class="number">0</span>; </span><br><span class="line">hold on </span><br><span class="line"><span class="keyword">while</span> a&lt;<span class="number">0.05</span>     </span><br><span class="line">	c=[<span class="number">-0.05</span>,<span class="number">-0.27</span>,<span class="number">-0.19</span>,<span class="number">-0.185</span>,<span class="number">-0.185</span>];     </span><br><span class="line">	A=[zeros(<span class="number">4</span>,<span class="number">1</span>),diag([<span class="number">0.025</span>,<span class="number">0.015</span>,<span class="number">0.055</span>,<span class="number">0.026</span>])];     </span><br><span class="line">	b=a*<span class="built_in">ones</span>(<span class="number">4</span>,<span class="number">1</span>);     </span><br><span class="line">	Aeq=[<span class="number">1</span>,<span class="number">1.01</span>,<span class="number">1.02</span>,<span class="number">1.045</span>,<span class="number">1.065</span>];     </span><br><span class="line">	beq=<span class="number">1</span>;     </span><br><span class="line">	LB=<span class="built_in">zeros</span>(<span class="number">5</span>,<span class="number">1</span>);     </span><br><span class="line">	[x,Q]=linprog(c,A,b,Aeq,beq,LB);     </span><br><span class="line">	Q=-Q;     </span><br><span class="line">	plot(a,Q,<span class="string">'*r'</span>);     </span><br><span class="line">	a=a+<span class="number">0.001</span>; </span><br><span class="line"><span class="keyword">end</span> </span><br><span class="line">xlabel(<span class="string">'a'</span>),ylabel(<span class="string">'Q'</span>)</span><br></pre></td></tr></table></figure>
+</li>
+</ol>
+<p>结果：<br><img src="/2019/01/09/Math-Model/solution1.jpg" title="solution1"><br>当a=0.006时，出现转折，此后收益增长缓慢，风险增加迅速，选择拐点较优<br>2) 固定盈利，极小化风险<br>3) 按权重，设置投资偏好系数</p>
+
       
     </div>
     
@@ -389,7 +444,7 @@
         <p><span>本文标题:</span><a href="/2019/01/09/Math-Model/">Math Model</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
         <p><span>发布时间:</span>2019-01-09, 20:40:37</p>
-        <p><span>最后更新:</span>2019-01-10, 12:38:33</p>
+        <p><span>最后更新:</span>2019-01-10, 14:16:56</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/09/Math-Model/" title="Math Model">http://www.nia520.top/2019/01/09/Math-Model/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2019/01/09/Math-Model/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
