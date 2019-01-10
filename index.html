@@ -303,10 +303,75 @@
 <p>$$<br>s.t \quad \lbrace{ Ax &lt; b,<br>Aeq * x = beq,<br>lb \leq x \leq ub\rbrace}<br>$$<br>其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b 、beq为适当维数的列向量</p>
 <p>Matlab: [x,fval]=linprog(c,A,b,Aeq,beq,LB,UB,X0,OPTIONS) </p>
 <p>凸集的概念（图解）：<br><img src="/2019/01/09/Math-Model/tuji.png" title="凸集的概念"></p>
-<h2 id="运输问题"><a href="#运输问题" class="headerlink" title="运输问题"></a>运输问题</h2><p>产销平衡问题，典型的线性规划问题</p>
-<h2 id="指派问题"><a href="#指派问题" class="headerlink" title="指派问题"></a>指派问题</h2><p>某商品有m 个产地、n个销地，各产地的产量分别为a<sub>1</sub>,a<sub>2</sub>,…,a<sub>m</sub>,各销地的 需求量分别为b<sub>1</sub>,b<sub>2</sub>,…,b<sub>n</sub>。若该商品由i产地运到 j 销地的单位运价为c<sub>ij</sub> ，问应该如何调 运才能使总运费最省？ </p>
-<p>解：引入变量x<sub>ij</sub> ，其取值为由i产地运往 j 销地的该商品数量，数学模型为</p>
-<p>$$ min \quad \sum_{i=1}^m \sum_{j=1}^n  {c<sub>ij</sub> x<sub>ij</sub>} $$</p>
+<h2 id="运输问题"><a href="#运输问题" class="headerlink" title="运输问题"></a>运输问题</h2><p>某商品有m 个产地、n个销地，各产地的产量分别为a<sub>1</sub>,a<sub>2</sub>,…,a<sub>m</sub>,各销地的 需求量分别为b<sub>1</sub>,b<sub>2</sub>,…,b<sub>n</sub>。若该商品由i产地运到 j 销地的单位运价为c<sub>ij</sub> ，问应该如何调 运才能使总运费最省？ </p>
+<p>产销平衡问题，典型的线性规划问题</p>
+<h2 id="指派问题"><a href="#指派问题" class="headerlink" title="指派问题"></a>指派问题</h2><p>0-1规划，特殊的运输问题</p>
+<p>匈牙利算法(Hungarian method)：<br>如果系数矩阵C=c<sub>ij</sub>一行（或一列）中每 一元素都加上或减去同一个数，得到一个新矩阵B=b<sub>ij，</sub>则以C或B为系数矩阵的指派问题具有相同的最优指派。</p>
+<p>若有问题：</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>A</th>
+<th>B</th>
+<th>C</th>
+<th>D </th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>甲</td>
+<td>16</td>
+<td>15</td>
+<td>19</td>
+<td>22 </td>
+</tr>
+<tr>
+<td>乙</td>
+<td>17</td>
+<td>21</td>
+<td>19</td>
+<td>18 </td>
+</tr>
+<tr>
+<td>丙</td>
+<td>24</td>
+<td>22</td>
+<td>18</td>
+<td>17 </td>
+</tr>
+<tr>
+<td>丁</td>
+<td>17</td>
+<td>19</td>
+<td>22</td>
+<td>16</td>
+</tr>
+</tbody>
+</table>
+<p>则将第一行元素减去此行中的最小元素 15，同样，第二行元素减去 17，第三行 元素减去 17，最后一行的元素减去 16，得</p>
+<p>$$<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; 4 &amp; 7 \\<br>0 &amp; 4 &amp; 2 &amp; 1 \\<br>7 &amp; 5 &amp; 1 &amp; 0 \\<br>1 &amp; 3 &amp; 6 &amp; 0<br>\end{matrix}<br>\right]<br>$$</p>
+<p>再将第三列元素各减1，得：</p>
+<p>$$<br>\left[<br>\begin{matrix}<br>1 &amp; 0 &amp; 3 &amp; 7 \\<br>0 &amp; 4 &amp; 1 &amp; 1 \\<br>7 &amp; 5 &amp; 0 &amp; 0 \\<br>1 &amp; 3 &amp; 5 &amp; 0<br>\end{matrix}<br>\right]<br>$$</p>
+<p>以上过程称为行规约和列规约，以此为系数矩阵的指派问题具有最优解：</p>
+<p>$$<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 &amp; 4 \\<br>2 &amp; 1 &amp; 3 &amp; 4<br>\end{matrix}<br>\right)<br>$$</p>
+<p>但是对于某些矩阵，进行行规约和列规约后并不能看出最优解，此时需要画盖0线，如有以下系数矩阵：</p>
+<p>$$<br>\left[<br>\begin{matrix} 7<br>12 &amp; 7 &amp; 9 &amp; 7 &amp; 9 \\<br>8 &amp; 9 &amp; 6 &amp; 6 &amp; 6 \\<br>7 &amp; 17 &amp; 12 &amp; 14 &amp; 12 \\<br>15 &amp; 14 &amp; 6 &amp; 6 &amp; 10 \\<br>4 &amp; 10 &amp; 7 &amp; 10 &amp; 6<br>\end{matrix}<br>\right]<br>$$</p>
+<ol>
+<li>行规约与列规约后：</li>
+</ol>
+<p>$$<br>\left[<br>\begin{matrix}<br>5 &amp; 0^<em> &amp; 2 &amp; 0 &amp; 2 \\<br>2 &amp; 3 &amp; 0 &amp; 0^</em> &amp; 0 \\<br>0^<em> &amp; 10 &amp; 5 &amp; 7 &amp; 5 \\<br>9 &amp; 8 &amp; 0^</em> &amp; 0 &amp; 4 \\<br>0 &amp; 6 &amp; 3 &amp; 6 &amp; 2<br>\end{matrix}<br>\right]<br>$$</p>
+<ol start="2">
+<li>试指派：尝试找出n个不同行不同列的零元素(尝试的0用*做上标标记)，且不能用贪心法，要用回溯，此矩阵无法找出</li>
+<li>画盖0线执行以下步骤：<br>1) 对未标记的0元素所在行打√<br>2) 对√行中0元素所在的列打√<br>3) 对√列中选中的0元素所在行打√<br>重复2)、3)直到不出现新√<br>4) 用直线盖住未打√的行和列</li>
+<li>更新矩阵：取盖0线未覆盖的最小元素，√行减去此元素，√列加上此元素<br>重复画盖0线与更新矩阵，直到试指派成功。</li>
+</ol>
+<p>在此问题中，第三行和第五行为打√行，第一列为打√列，最小元素为2，更新矩阵后：</p>
+<p>$$<br>\left[<br>\begin{matrix}<br>7 &amp; 0^<em> &amp; 2 &amp; 0 &amp; 2 \\<br>4 &amp; 3 &amp; 0 &amp; 0^</em> &amp; 0 \\<br>0^<em> &amp; 8 &amp; 3 &amp; 5 &amp; 3 \\<br>11 &amp; 8 &amp; 0^</em> &amp; 0 &amp; 4 \\<br>0 &amp; 4 &amp; 1 &amp; 4 &amp; 0^*<br>\end{matrix}<br>\right]<br>$$</p>
+<p>按图中标记，试指派成功，则最优解为：</p>
+<p>$$<br>\left(<br>\begin{matrix}<br>1 &amp; 2 &amp; 3 &amp; 4 &amp; 5 \\<br>2 &amp; 4 &amp; 1 &amp; 3 &amp; 5<br>\end{matrix}<br>\right)<br>$$</p>
+<p>总结一下，匈牙利的算法如下流程图：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">st=&gt;start: 开始</span><br><span class="line">op1=&gt;operation: 行规约</span><br><span class="line">op2=&gt;operation: 列规约</span><br><span class="line">cond=&gt;试指派: Success or Fail?</span><br><span class="line">e=&gt;end</span><br><span class="line">op3=&gt;operation: 画盖0线</span><br><span class="line">op4=&gt;operation: 更新矩阵</span><br><span class="line"></span><br><span class="line">st-&gt;op1-&gt;op2-&gt;cond</span><br><span class="line">cond(Success)-&gt;e</span><br><span class="line">cond(Fail)-&gt;op3-&gt;op4-&gt;cond</span><br></pre></td></tr></table></figure>
 <h2 id="对偶理论与灵敏度分析"><a href="#对偶理论与灵敏度分析" class="headerlink" title="对偶理论与灵敏度分析"></a>对偶理论与灵敏度分析</h2><h2 id="投资的收益和风险"><a href="#投资的收益和风险" class="headerlink" title="投资的收益和风险"></a>投资的收益和风险</h2>
       
     </div>
