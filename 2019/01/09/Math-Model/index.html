@@ -25,7 +25,7 @@
 <meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/tuji.png">
 <meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/HungarianMethod.png">
 <meta property="og:image" content="http://www.nia520.top/2019/01/09/Math-Model/solution1.jpg">
-<meta property="og:updated_time" content="2019-01-10T06:16:56.092Z">
+<meta property="og:updated_time" content="2019-01-10T09:33:04.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Math Model">
 <meta name="twitter:description" content="线性规划（Linear Programming）线性规划线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。Matlab标准形式： $$ min \quad  $$ $$s.t \quad \lbrace{ Ax &amp;lt; b,Aeq * x = beq,lb \leq x \leq ub\rbrace}$$其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b">
@@ -433,6 +433,13 @@
 </li>
 </ol>
 <p>结果：<br><img src="/2019/01/09/Math-Model/solution1.jpg" title="solution1"><br>当a=0.006时，出现转折，此后收益增长缓慢，风险增加迅速，选择拐点较优<br>2) 固定盈利，极小化风险<br>3) 按权重，设置投资偏好系数</p>
+<h1 id="整数规划"><a href="#整数规划" class="headerlink" title="整数规划"></a>整数规划</h1><h2 id="概论"><a href="#概论" class="headerlink" title="概论"></a>概论</h2><p>定义：变量全部或部分限制为整数<br>特点： 整数规划优解不能按照实数优解简单取整而获得<br>求解方法：</p>
+<pre><code>1. 分枝定界法
+2. 割平面法
+3. 隐枚举法
+4. 匈牙利法
+5. 蒙特卡洛法
+</code></pre><h2 id="分枝定界法"><a href="#分枝定界法" class="headerlink" title="分枝定界法"></a>分枝定界法</h2><p>分枝： 把全部可行解空间反复地分割为越来越小的子集<br>定界： 对每个子集内的解集计算一个目标下界<br>剪枝： 在每次分枝后，凡是界限超出已知可行解集目标值的那些子集不再进一步分枝 </p>
 
       
     </div>
@@ -444,7 +451,7 @@
         <p><span>本文标题:</span><a href="/2019/01/09/Math-Model/">Math Model</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
         <p><span>发布时间:</span>2019-01-09, 20:40:37</p>
-        <p><span>最后更新:</span>2019-01-10, 14:16:56</p>
+        <p><span>最后更新:</span>2019-01-10, 17:33:04</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2019/01/09/Math-Model/" title="Math Model">http://www.nia520.top/2019/01/09/Math-Model/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2019/01/09/Math-Model/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -458,6 +465,12 @@
 
 
     <nav id="article-nav">
+        
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/2020/09/25/hello-world/">
+                    Hello World
+                </a>
+            </div>
         
         
             <div id="article-nav-older" class="article-nav-title">
@@ -474,7 +487,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目录</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#线性规划（Linear-Programming）"><span class="toc-number">1.</span> <span class="toc-text">线性规划（Linear Programming）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#线性规划"><span class="toc-number">1.1.</span> <span class="toc-text">线性规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运输问题"><span class="toc-number">1.2.</span> <span class="toc-text">运输问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指派问题"><span class="toc-number">1.3.</span> <span class="toc-text">指派问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对偶理论与灵敏度分析"><span class="toc-number">1.4.</span> <span class="toc-text">对偶理论与灵敏度分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#投资的收益和风险"><span class="toc-number">1.5.</span> <span class="toc-text">投资的收益和风险</span></a></li></ol></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#线性规划（Linear-Programming）"><span class="toc-number">1.</span> <span class="toc-text">线性规划（Linear Programming）</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#线性规划"><span class="toc-number">1.1.</span> <span class="toc-text">线性规划</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#运输问题"><span class="toc-number">1.2.</span> <span class="toc-text">运输问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#指派问题"><span class="toc-number">1.3.</span> <span class="toc-text">指派问题</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对偶理论与灵敏度分析"><span class="toc-number">1.4.</span> <span class="toc-text">对偶理论与灵敏度分析</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#投资的收益和风险"><span class="toc-number">1.5.</span> <span class="toc-text">投资的收益和风险</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#整数规划"><span class="toc-number">2.</span> <span class="toc-text">整数规划</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#概论"><span class="toc-number">2.1.</span> <span class="toc-text">概论</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#分枝定界法"><span class="toc-number">2.2.</span> <span class="toc-text">分枝定界法</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -551,7 +564,9 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+            <a href="/2020/09/25/hello-world/" title="上一篇: Hello World">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
@@ -563,7 +578,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2019/01/09/Math-Model/">Math Model</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/Git代码提交/">Git代码提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/My-New-Post/">My New Post</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/hello-world/">Hello World</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/26/Cycle-GAN源码阅读笔记/">Cycle_GAN源码阅读笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/09/Math-Model/">Math Model</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/Git代码提交/">Git代码提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/My-New-Post/">My New Post</a></li></ul>
 
 
 
@@ -577,7 +592,7 @@
         <div id="footer-info">
             <div class="footer-left">
                 <i class="fa fa-copyright"></i> 
-                2018-2019 Woo
+                2018-2020 Woo
             </div>
             <div class="footer-right">
                 <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>

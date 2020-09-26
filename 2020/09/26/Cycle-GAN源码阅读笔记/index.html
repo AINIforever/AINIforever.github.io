@@ -14,17 +14,18 @@
 <meta name="author" content="Woo" />
 
 
-    
-    
 
-
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hexo">
-<meta property="og:url" content="http://www.nia520.top/index.html">
+<meta name="description" content="GAN网络代码笔记optionsoptions分为base_option,train_option,test_option  base_option: 训练和测试阶段公用的option，也包括parser、print、saving等操作 slef包含一个解析器parser，创建语句为： 1self.parser = argparse.ArgumentParser()  initialize方法定义">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Cycle_GAN源码阅读笔记">
+<meta property="og:url" content="http://www.nia520.top/2020/09/26/Cycle-GAN源码阅读笔记/index.html">
 <meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="GAN网络代码笔记optionsoptions分为base_option,train_option,test_option  base_option: 训练和测试阶段公用的option，也包括parser、print、saving等操作 slef包含一个解析器parser，创建语句为： 1self.parser = argparse.ArgumentParser()  initialize方法定义">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2020-09-26T12:43:09.966Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hexo">
+<meta name="twitter:title" content="Cycle_GAN源码阅读笔记">
+<meta name="twitter:description" content="GAN网络代码笔记optionsoptions分为base_option,train_option,test_option  base_option: 训练和测试阶段公用的option，也包括parser、print、saving等操作 slef包含一个解析器parser，创建语句为： 1self.parser = argparse.ArgumentParser()  initialize方法定义">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -52,13 +53,11 @@
 <link rel="stylesheet" href="/css/style.css">
 
 
-    <style> .article { opacity: 0;} </style>
-
 
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Hexo</title>
+<title>Cycle_GAN源码阅读笔记 | Hexo</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -67,8 +66,8 @@
     var yiliaConfig = {
         fancybox: true,
         animate: true,
-        isHome: true,
-        isPost: false,
+        isHome: false,
+        isPost: true,
         isArchive: false,
         isTag: false,
         isCategory: false,
@@ -267,9 +266,7 @@
     </div>
     <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
 </nav>
-      <div class="body-wrap">
-  
-    <article id="post-Cycle-GAN源码阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Cycle-GAN源码阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
       <a href="/2020/09/26/Cycle-GAN源码阅读笔记/" class="article-date">
@@ -287,12 +284,19 @@
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/26/Cycle-GAN源码阅读笔记/">Cycle_GAN源码阅读笔记</a>
+    <h1 class="article-title" itemprop="name">
+      Cycle_GAN源码阅读笔记
     </h1>
   
 
       </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+        <div class="clearfix"></div>
+      </div>
       
     
     <div class="article-entry" itemprop="articleBody">
@@ -437,341 +441,85 @@
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-      <div class="clearfix"></div>
-    </div>
-    
   </div>
   
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/09/25/hello-world/" class="article-date">
-      <time datetime="2020-09-25T14:26:06.835Z" itemprop="datePublished">2020-09-25</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/25/hello-world/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2020/09/25/hello-world/#more">more >></a>
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2020/09/26/Cycle-GAN源码阅读笔记/">Cycle_GAN源码阅读笔记</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">Woo</a></p>
+        <p><span>发布时间:</span>2020-09-26, 20:33:31</p>
+        <p><span>最后更新:</span>2020-09-26, 20:43:09</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2020/09/26/Cycle-GAN源码阅读笔记/" title="Cycle_GAN源码阅读笔记">http://www.nia520.top/2020/09/26/Cycle-GAN源码阅读笔记/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://www.nia520.top/2020/09/26/Cycle-GAN源码阅读笔记/　　作者: Woo" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Math-Model" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/09/Math-Model/" class="article-date">
-      <time datetime="2019-01-09T12:40:37.000Z" itemprop="datePublished">2019-01-09</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/09/Math-Model/">Math Model</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="线性规划（Linear-Programming）"><a href="#线性规划（Linear-Programming）" class="headerlink" title="线性规划（Linear Programming）"></a>线性规划（Linear Programming）</h1><h2 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h2><p>线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。<br>Matlab标准形式：</p>
-<p>$$ min \quad  $$</p>
-<p>$$<br>s.t \quad \lbrace{ Ax &lt; b,<br>Aeq * x = beq,<br>lb \leq x \leq ub\rbrace}<br>$$<br>其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b 、beq为适当维数的列向量</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-      
-        <p class="article-more-link">
-          <a href="/2019/01/09/Math-Model/#more">more >></a>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
         </p>
-      
-      <div class="clearfix"></div>
     </div>
-    
-  </div>
-  
-</article>
 
 
 
-
-
-
-
-
-
-  
-    <article id="post-HashSet与TreeSet浅析" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/28/HashSet与TreeSet浅析/" class="article-date">
-      <time datetime="2018-07-28T04:10:08.000Z" itemprop="datePublished">2018-07-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+    <nav id="article-nav">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。</p>
-<h2 id="一-区别："><a href="#一-区别：" class="headerlink" title="一. 区别："></a>一. 区别：</h2><blockquote>
-<p>HastSet使用散列表进行存储，元素无序，允许为null<br>TreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null</p>
-</blockquote>
-<p>代码演示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="string">"first"</span>);</span><br><span class="line">set1.add(<span class="string">"second"</span>);</span><br><span class="line">set1.add(<span class="string">"third"</span>);</span><br><span class="line">System.out.println(set1);</span><br><span class="line"><span class="comment">//输出结果：[third, first, second]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//TreeSet</span></span><br><span class="line">Set set2 = <span class="keyword">new</span> TreeSet();</span><br><span class="line">set2.add(<span class="string">"first"</span>);</span><br><span class="line">set2.add(<span class="string">"second"</span>);</span><br><span class="line">set2.add(<span class="string">"third"</span>);</span><br><span class="line">set2.add(<span class="string">"forth"</span>);</span><br><span class="line">System.out.println(set2);</span><br><span class="line"><span class="comment">//输出结果：[first,forth, second, third]</span></span><br></pre></td></tr></table></figure></p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/28/HashSet与TreeSet浅析/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-Git代码提交" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/28/Git代码提交/" class="article-date">
-      <time datetime="2018-07-28T04:07:20.000Z" itemprop="datePublished">2018-07-28</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/Git代码提交/">Git代码提交</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <p>第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：</p>
-<blockquote>
-<p>git init<br>git add .</p>
-</blockquote>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/28/Git代码提交/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/26/My-New-Post/" class="article-date">
-      <time datetime="2018-07-26T02:30:44.000Z" itemprop="datePublished">2018-07-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2020/09/25/hello-world/">
+                    Hello World
+                </a>
+            </div>
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/My-New-Post/">My New Post</a>
-    </h1>
-  
+    </nav>
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Windows下Django-Python3-使用Mysqlclient配置并连接Mysql"><a href="#Windows下Django-Python3-使用Mysqlclient配置并连接Mysql" class="headerlink" title="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql"></a>Windows下Django(Python3)使用Mysqlclient配置并连接Mysql</h1><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><p>之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。<br>版本： python 3.6.1， django 2.0.7</p>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/26/My-New-Post/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
   
 </article>
 
+    <div id="toc" class="toc-article">
+        <strong class="toc-title">文章目录</strong>
+        
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#GAN网络代码笔记"><span class="toc-number">1.</span> <span class="toc-text">GAN网络代码笔记</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#options"><span class="toc-number">1.1.</span> <span class="toc-text">options</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#data"><span class="toc-number">1.2.</span> <span class="toc-text">data</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#models"><span class="toc-number">1.3.</span> <span class="toc-text">models</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#torch-optim-lr-shceduler-LambdaLR"><span class="toc-number">1.3.1.</span> <span class="toc-text">torch.optim.lr_shceduler.LambdaLR:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#torch-optim-lr-scheduler-StepLR"><span class="toc-number">1.3.2.</span> <span class="toc-text">torch.optim.lr_scheduler.StepLR:</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#torch-optim-lr-scheduler-ReduceLROnPlateau"><span class="toc-number">1.3.3.</span> <span class="toc-text">torch.optim.lr_scheduler.ReduceLROnPlateau</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#torch-optim-lr-scheduler-CosineAnnealingLR"><span class="toc-number">1.3.4.</span> <span class="toc-text">torch.optim.lr_scheduler.CosineAnnealingLR</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#正态分布"><span class="toc-number">1.3.5.</span> <span class="toc-text">正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Xavier正态分布"><span class="toc-number">1.3.6.</span> <span class="toc-text">Xavier正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#kaiming正态分布"><span class="toc-number">1.3.7.</span> <span class="toc-text">kaiming正态分布</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#orthogonal-正交-初始化"><span class="toc-number">1.3.8.</span> <span class="toc-text">orthogonal(正交)初始化</span></a></li></ol></li></ol></li></ol>
+        
+    </div>
+    <style>
+        .left-col .switch-btn,
+        .left-col .switch-area {
+            display: none;
+        }
+        .toc-level-3 i,
+        .toc-level-3 ol {
+            display: none !important;
+        }
+    </style>
+
+    <input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+
+    <script>
+        yiliaConfig.toc = ["隐藏目录", "显示目录", !!"false"];
+    </script>
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
+            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
+            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
+            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
+            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
+            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
+            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"Cycle_GAN源码阅读笔记　| Hexo　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
 
 
 
@@ -779,9 +527,54 @@
 
 
 
+    
+        <section class="livere" id="comments">
+    <!-- 来必力City版安装代码 -->
+    <div id="lv-container" data-id="city" data-uid="Mi8xLzM=">
+    <script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
 
-  
-  
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+       })(document, 'script');
+    </script>
+    <noscript> 为正常使用来必力评论功能请激活JavaScript</noscript>
+    </div>
+    <!-- City版安装代码已完成 -->
+</section>
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2020/09/25/hello-world/" title="下一篇: Hello World">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2020/09/26/Cycle-GAN源码阅读笔记/">Cycle_GAN源码阅读笔记</a></li><li class="post-list-item"><a class="post-list-link" href="/2020/09/25/hello-world/">Hello World</a></li><li class="post-list-item"><a class="post-list-link" href="/2019/01/09/Math-Model/">Math Model</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/28/Git代码提交/">Git代码提交</a></li><li class="post-list-item"><a class="post-list-link" href="/2018/07/26/My-New-Post/">My New Post</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
 </div>
       <footer id="footer">
     <div class="outer">
