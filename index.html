@@ -1,21 +1,82 @@
 <!DOCTYPE html>
-<html >
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
 <head>
-
-    <!--[if lt IE 9]>
-        <style>body {display: none; background: none !important} </style>
-        <meta http-equiv="Refresh" Content="0; url=//outdatedbrowser.com/" />
-    <![endif]-->
-
-<meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1" />
-<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
-<meta name="format-detection" content="telephone=no" />
-<meta name="author" content="Woo" />
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
 
 
-    
-    
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="Hexo, NexT" />
+
+
+
+
+
+
+
+
 
 
 <meta property="og:type" content="website">
@@ -26,66 +87,44 @@
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Hexo">
 
-<link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
 
-    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
-
-
-
-    <link rel="shortcut icon" href="/favicon.ico">
-
-
-
-    <link href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css" rel="stylesheet">
-
-
-
-    <link href="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.css" rel="stylesheet">
-
-
-
-    <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
-    <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
-
-
-<link rel="stylesheet" href="/css/style.css">
-
-
-    <style> .article { opacity: 0;} </style>
-
-
-<link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
-
-
-<title>Hexo</title>
-
-<script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
-<script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
-
-<script>
-    var yiliaConfig = {
-        fancybox: true,
-        animate: true,
-        isHome: true,
-        isPost: false,
-        isArchive: false,
-        isTag: false,
-        isCategory: false,
-        fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
-        scrollreveal: "//cdn.bootcss.com/scrollReveal.js/3.1.4/scrollreveal.min.js",
-        search: true
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
     }
+  };
 </script>
 
 
-    <script>
-        yiliaConfig.jquery_ui = [true, "//cdn.bootcss.com/jqueryui/1.10.4/jquery-ui.min.js", "//cdn.bootcss.com/jqueryui/1.10.4/css/jquery-ui.min.css"];
-    </script>
+
+  <link rel="canonical" href="http://www.nia520.top/"/>
 
 
 
-    <script> yiliaConfig.rootUrl = "\/";</script>
+
+
+  <title>Hexo</title>
+  
+
+
 
 
 
@@ -93,212 +132,174 @@
 
 
 </head>
-<body>
-  <div id="container">
-    <div class="left-col">
-    <div class="overlay"></div>
-<div class="intrude-less">
-    <header id="header" class="inner">
-        <a href="/" class="profilepic">
-            <img src="/img/avatar.png" class="animated zoomIn">
-        </a>
-        <hgroup>
-          <h1 class="header-author"><a href="/">Woo</a></h1>
-        </hgroup>
 
-        
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
 
-        
-            <form id="search-form">
-            <input type="text" id="local-search-input" name="q" placeholder="search..." class="search form-control" autocomplete="off" autocorrect="off" searchonload="" />
-            <i class="fa fa-times" onclick="resetSearch()"></i>
-            </form>
-            <div id="local-search-result"></div>
-            <p class='no-result'>No results found <i class='fa fa-spinner fa-pulse'></i></p>
-        
+  
+  
+    
+  
 
+  <div class="container sidebar-position-left 
+  page-home">
+    <div class="headband"></div>
 
-        
-            <div id="switch-btn" class="switch-btn">
-                <div class="icon">
-                    <div class="icon-ctn">
-                        <div class="icon-wrap icon-house" data-idx="0">
-                            <div class="birdhouse"></div>
-                            <div class="birdhouse_holes"></div>
-                        </div>
-                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
-                            <div class="ribbon"></div>
-                        </div>
-                        
-                        <div class="icon-wrap icon-link hide" data-idx="2">
-                            <div class="loopback_l"></div>
-                            <div class="loopback_r"></div>
-                        </div>
-                        
-                        
-                        <div class="icon-wrap icon-me hide" data-idx="3">
-                            <div class="user"></div>
-                            <div class="shoulder"></div>
-                        </div>
-                        
-                    </div>
-                    
-                </div>
-                <div class="tips-box hide">
-                    <div class="tips-arrow"></div>
-                    <ul class="tips-inner">
-                        <li>菜单</li>
-                        <li>标签</li>
-                        
-                        <li>友情链接</li>
-                        
-                        
-                        <li>关于我</li>
-                        
-                    </ul>
-                </div>
-            </div>
-        
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
 
-        <div id="switch-area" class="switch-area">
-            <div class="switch-wrap">
-                <section class="switch-part switch-part1">
-                    <nav class="header-menu">
-                        <ul>
-                        
-                            <li><a href="/">主页</a></li>
-                        
-                            <li><a href="/archives/">所有文章</a></li>
-                        
-                            <li><a href="/tags/">标签云</a></li>
-                        
-                            <li><a href="/about/">关于我</a></li>
-                        
-                        </ul>
-                    </nav>
-                    <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" href="/1310178049@qq.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-                    </nav>
-                </section>
-                
-                
-                <section class="switch-part switch-part2">
-                    <div class="widget tagcloud" id="js-tagcloud">
-                        <ul class="tag-list"><li class="tag-list-item"><a class="tag-list-link" href="/tags/Git/">Git</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Java/">Java</a></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/Python/">Python</a></li></ul>
-                    </div>
-                </section>
-                
-                
-                
-                <section class="switch-part switch-part3">
-                    <div id="js-friends">
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://www.jianshu.com/u/268d78c34831">简书</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="https://github.com/AINIforever">GitHub</a>
-                    
-                      <a class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
-                    
-                    </div>
-                </section>
-                
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
 
-                
-                
-                <section class="switch-part switch-part4">
-                
-                    <div id="js-aboutme">专注于前端</div>
-                </section>
-                
-            </div>
-        </div>
-    </header>                
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
 </div>
-    </div>
-    <div class="mid-col">
-      <nav id="mobile-nav">
-      <div class="overlay">
-          <div class="slider-trigger"></div>
-          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">Woo</a></h1>
-      </div>
-    <div class="intrude-less">
-        <header id="header" class="inner">
-            <a href="/" class="profilepic">
-                <img src="/img/avatar.png" class="animated zoomIn">
-            </a>
-            <hgroup>
-              <h1 class="header-author"><a href="/" title="回到主页">Woo</a></h1>
-            </hgroup>
-            
-            <nav class="header-menu">
-                <ul>
-                
-                    <li><a href="/">主页</a></li>
-                
-                    <li><a href="/archives/">所有文章</a></li>
-                
-                    <li><a href="/tags/">标签云</a></li>
-                
-                    <li><a href="/about/">关于我</a></li>
-                
-                <div class="clearfix"></div>
-                </ul>
-            </nav>
-            <nav class="header-nav">
-                        <ul class="social">
-                            
-                                <a class="fa Email" target="_blank" href="/1310178049@qq.com" title="Email"></a>
-                            
-                                <a class="fa GitHub" target="_blank" href="#" title="GitHub"></a>
-                            
-                                <a class="fa RSS" target="_blank" href="/atom.xml" title="RSS"></a>
-                            
-                        </ul>
-            </nav>
-        </header>                
-    </div>
-    <link class="menu-list" tags="标签" friends="友情链接" about="关于我"/>
-</nav>
-      <div class="body-wrap">
-  
-    <article id="post-Cycle-GAN源码阅读笔记" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/09/26/Cycle-GAN源码阅读笔记/" class="article-date">
-      <time datetime="2020-09-26T12:33:31.000Z" itemprop="datePublished">2020-09-26</time>
-</a>
 
-
-    </div>
+<nav class="site-nav">
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+
+  
+    <ul id="menu" class="menu">
+      
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/26/Cycle-GAN源码阅读笔记/">Cycle_GAN源码阅读笔记</a>
-    </h1>
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
   
 
-      </header>
-      
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+  <section id="posts" class="posts-expand">
     
-    <div class="article-entry" itemprop="articleBody">
       
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2020/09/26/Cycle-GAN源码阅读笔记/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/26/Cycle-GAN源码阅读笔记/" itemprop="url">Cycle_GAN源码阅读笔记</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-26T20:33:31+08:00">
+                2020-09-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-        <h1 id="GAN网络代码笔记"><a href="#GAN网络代码笔记" class="headerlink" title="GAN网络代码笔记"></a>GAN网络代码笔记</h1><h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>options分为base_option,train_option,test_option</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="GAN网络代码笔记"><a href="#GAN网络代码笔记" class="headerlink" title="GAN网络代码笔记"></a>GAN网络代码笔记</h1><h2 id="options"><a href="#options" class="headerlink" title="options"></a>options</h2><p>options分为base_option,train_option,test_option</p>
 <ol>
 <li><p>base_option:<br> 训练和测试阶段公用的option，也包括parser、print、saving等操作<br> slef包含一个解析器parser，创建语句为：</p>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">self.parser = argparse.ArgumentParser()</span><br></pre></td></tr></table></figure>
@@ -310,602 +311,991 @@
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">""" print opt """</span></span><br><span class="line">message = <span class="string">''</span></span><br><span class="line">message += <span class="string">'----------------Options---------------\n'</span></span><br><span class="line"><span class="keyword">for</span> k,v <span class="keyword">in</span> sorted(vars(opt).items()):</span><br><span class="line">	comment = <span class="string">''</span></span><br><span class="line">	default = self.parser.get_default(k)</span><br><span class="line">	<span class="keyword">if</span> v != default:</span><br><span class="line">		comment = <span class="string">'\t[default: %s]'</span> % str(default)</span><br><span class="line">	message += <span class="string">'&#123;:&gt;25&#125;:&#123;:&lt;30&#125;&#123;&#125;\n'</span>.format(str(k),str(v),comment)</span><br><span class="line">message += <span class="string">'----------------End--------------------\n'</span></span><br><span class="line">print(message)</span><br><span class="line"><span class="comment"># save to disk</span></span><br><span class="line">expr_dir = os.path.join(opt.checkpoints_dir,opt.name)</span><br><span class="line">util.mkdir(exp_dir)</span><br><span class="line">file_name = os.path.join(expr_dir,<span class="string">'&#123;&#125;_opt.txt'</span>.format(opt.phase))</span><br><span class="line"><span class="keyword">with</span> open(file_name,<span class="string">'wt'</span>) <span class="keyword">as</span> opt_file</span><br><span class="line">	opt_file.write(message)</span><br><span class="line">	opt_file.write(<span class="string">'\n'</span>)</span><br></pre></td></tr></table></figure>
 </li>
 </ol>
-<p>有时需要使用到parser.parse_known_args()来暂时保存基本配置，再通过Model类和Data类中定义的方法来修改模型和数据相关的配置。<br>在执行训练代码时，即可parse()方法来获取opt并执行配置的初始化。</p>
-<ol start="2">
-<li>train_option和test_option<br>在方法上继承base_option，只更新训练部分或测试部分的配置参数。<br>其中一些常用的配置：</li>
-</ol>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># basic parameters</span></span><br><span class="line">parser.add_argument(<span class="string">'--dataroot'</span>,required=<span class="keyword">True</span>,help=<span class="string">'path to images(should have subfolders trainA,trainB...)'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--gpu_ids'</span>,type=str,default=<span class="string">'0'</span>,help=<span class="string">'gpu ids:eg. 0 0,1,2 0,2 use -1 for cpu'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--checkpoints_dir'</span>,type=str,default=<span class="string">'./checkpoints'</span>,help=<span class="string">'models are saved here'</span>)</span><br><span class="line"><span class="comment"># model parameters</span></span><br><span class="line">parser.add_argument(<span class="string">'--model'</span>,type=str,default=<span class="string">'cycle_gan'</span>,help=<span class="string">'choose which model to use.[cycle_gan | pix2pix | ...]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--input_nc'</span>,type=int,default=<span class="number">3</span>,help=<span class="string">'# of input image channels:3 for RGB and 1 for grayscale'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--output_nc'</span>,type=int,default=<span class="number">3</span>,help=<span class="string">'# of output image channels:3 for RGB and 1 for grayscale'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--ngf'</span>,type=int,default=<span class="number">64</span>,help=<span class="string">'# of generator filters in the last conv layer'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--ndf'</span>,type=int,default=<span class="number">64</span>,help=<span class="string">'# of discrim filters in the last conv layer'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--netG'</span>,type=str,default=<span class="string">'resnet_9blocks'</span>,help=<span class="string">'specify generator architecture [resnet_9blocks | resnet_6blocks | unet256 | unet128 | ...]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--netD'</span>,type=str,default=<span class="string">'basic'</span>,help=<span class="string">'specify discrimenator architecture [basic | n_layers | pixel] The basic model is a 70*70 PatchGAN. n_layers allows you to specify the layers in discriminator'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--n_layers_D'</span>,type=int,default=<span class="number">3</span>,help=<span class="string">'only use if netD==n_layers'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--norm'</span>,type=str,default=<span class="string">'instance'</span>,help=<span class="string">'instance normalization or batch normalization [instance | batch | none]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--init_type'</span>,type=str,default=<span class="string">'normal'</span>,help=<span class="string">'network initializing [normal | xavier | kaiming]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--init_gain'</span>,type=float,default=<span class="number">0.02</span>,help=<span class="string">'scaling factor for normal, xavier, and orthogonal'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--dropout_rate'</span>,type=float,default=<span class="number">0</span>,help=<span class="string">'the dropout rate of the generator'</span>)</span><br><span class="line"><span class="comment"># dataset parameters</span></span><br><span class="line">parser.add_argument(<span class="string">'--dataset_mode'</span>,type=str,default=<span class="string">'unaligned'</span>,help=<span class="string">'chooses how datasets are loaded. [unaligned | aligned | single | colorization]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--direction'</span>,type=str,default=<span class="string">'AtoB'</span>,help=<span class="string">'AtoB or BtoA'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--serial_batches'</span>,action=<span class="string">'store_true'</span>,help=<span class="string">'if true, take images in order to make batches, otherwise take them randomly'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--num_threads'</span>,type=int,default=<span class="number">4</span>,help=<span class="string">'# threads for loading data'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--batch_size'</span>,type=int,default=<span class="number">1</span>,help=<span class="string">'input batch size'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--load_size'</span>,type=int,default=<span class="number">286</span>,,help=<span class="string">'scale image to this size'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--crop_size'</span>,type=int,default=<span class="number">256</span>,help=<span class="string">'then crop to this size'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--max_dataset_size'</span>,type=int,default=float(<span class="string">"inf"</span>),help=<span class="string">'Maximum number of samples allowed per dataset. If the dataset directory contains more than max_dataset_size, only a subset is loaded.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--preprocess'</span>,type=str,default=<span class="string">'resize_and_crop'</span>,help=<span class="string">'scaling and croping of image at load time. [resize_and_crop | crop | scale_width | scale_width_and_crop | none]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--no_flip'</span>,action=<span class="string">'stroe_true'</span>,help=<span class="string">'if specified, do not flip the images for data augmentation'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--display_winsize'</span>,type=int,default=<span class="number">256</span>,help=<span class="string">'display window size for both visdom and HTML'</span>)</span><br><span class="line"><span class="comment"># train parameters</span></span><br><span class="line">parser.add_argument(<span class="string">'--niter'</span>,type=int,default=<span class="number">100</span>,help=<span class="string">'# of iter at starting learning rate'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--niter_decay'</span>,type=int,default=<span class="number">100</span>,help=<span class="string">'# of iter to linearly decay learning rate to zero'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--beta1'</span>,type=float,default=<span class="number">0.5</span>,help=<span class="string">'momentum term of adam'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--lr'</span>,type=float,default=<span class="number">0.0002</span>,help=<span class="string">'initial learning rate of adam'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--gan_mode'</span>,type=str,default=<span class="string">'lsgan'</span>,help=<span class="string">'the type of GAN objective. [vanilla | lsgan | wgangp]. vanilla GAN loss is the cross-entropy objective used in the original GAN paper.'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--pool_size'</span>,type=int,default=<span class="number">50</span>,help=<span class="string">'the size of image buffer that stores previously generated images'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--lr_policy'</span>,type=str,default=<span class="string">'linear'</span>,help=<span class="string">'learning rate policy. [linear | step | plateau | cosine]'</span>)</span><br><span class="line">parser.add_argument(<span class="string">'--lr_decay_iters'</span>,type=int,default=<span class="number">50</span>,help=<span class="string">'multiply by a gamma every lr_decay_iters iterations'</span>)</span><br></pre></td></tr></table></figure>
-<p>其中涉及到的问题（另存笔记）：</p>
-<ol>
-<li>batch_norm和instance_norm<br> IDD：独立同分布，是深度学习的重要假设<br>BatchNorm：使每一层的神经网络输入保持相同分布<br>Internal covariate shift（内部协变量偏移）问题：隐层的输入分布会变化<br>BN：对网络隐层神经元的激活值做白化操作，即变换到均值为0，单位方差的正态分布，之后在进行scale+shift操作：<br>$$y=\gamma*\frac{x-E[x]}{\sqrt {Var[x]+\epsilon}}+\beta$$</li>
-<li>参数初始化</li>
-<li>batch_size,epoch和iter<br> batchsize：批大小，每次训练在训练集中选取batchsize个样本进行训练；<br>iteration：1个iteration等于使用batchsize个样本训练一次；<br>epoch：1个epoch等于使用训练集中所有样本训练一次；</li>
-<li>resize and crop<br> 裁剪的作用不仅仅是为了扩充数据，也是一个弱化数据噪声和增加模型稳定性的方法。</li>
-<li>momentum及优化器</li>
-<li>GAN objective</li>
-</ol>
-<h2 id="data"><a href="#data" class="headerlink" title="data"></a>data</h2><p>该类下包含所有与数据加载和预处理的逻辑。<br>对于自定义的数据集dummy，需要写一个dummy_dataset.py文件，定义DummyDataset类，继承BaseDataset类并重载其中四个方法，再通过命令指定：’–dataset_mode dummy’。具体写法在template_dataset.py中有演示。</p>
-<ul>
-<li><strong>init</strong>.py<br>实现了整个类与训练、测试脚本的接口，脚本可以使用：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> data <span class="keyword">import</span> create_dataset</span><br><span class="line">dataset = create_dataset(opt)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>来根据给出的opt创建数据集。<br>find_dataset_using_name()通过指定名称实例化自定义数据集：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_dataset_using_name</span><span class="params">(dataset_name)</span>:</span></span><br><span class="line">    <span class="string">""" Import the module "data/[dataset_name]_dataset.py".</span></span><br><span class="line"><span class="string">    In the file, the class called DatasetNameDataset() will</span></span><br><span class="line"><span class="string">    be instantiaed. It has to be a subclass of Base Dataset,</span></span><br><span class="line"><span class="string">    and it is case-insensitive.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    dataset_filename = <span class="string">"data."</span> + dataset_name + <span class="string">"_dataset"</span></span><br><span class="line">    datasetlib = importlib.import_module(dataset_filename)</span><br><span class="line"></span><br><span class="line">    dataset = <span class="keyword">None</span></span><br><span class="line">    target_dataset_name = dataset_name.replace(<span class="string">'_'</span>,<span class="string">''</span>) + <span class="string">'dataset'</span></span><br><span class="line">    <span class="keyword">for</span> name, cls <span class="keyword">in</span> datasetlib.__dict__.items():</span><br><span class="line">        <span class="keyword">if</span> name.lower() == target_dataset_name.lower() \</span><br><span class="line">        <span class="keyword">and</span> issubclass(cls,BaseDataset):</span><br><span class="line">            dataset = cls</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> dataset <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">"In %s.py, there should be a subclass of BaseDataset with class name that matches %s in lowercase."</span> % (dataset_filename, target_dataset_name))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> dataset</span><br></pre></td></tr></table></figure>
-<p>create_dataset()用于根据opt创建数据集：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_dataset</span><span class="params">(opt)</span>:</span></span><br><span class="line">    <span class="string">"""create a dataset given the option</span></span><br><span class="line"><span class="string">    This function wraps the class CustomDatasetDataLoader.</span></span><br><span class="line"><span class="string">    This is the main interface between this package and 'train.py'/'test.py'</span></span><br><span class="line"><span class="string">    Exmaple:</span></span><br><span class="line"><span class="string">        &gt;&gt;&gt;from data import create_dataset</span></span><br><span class="line"><span class="string">        &gt;&gt;&gt;dataset = create_dataset(opt)</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    data_loader = CustomDatasetDataLoader(opt)</span><br><span class="line">    dataset = data_loader.load_data()</span><br><span class="line">    <span class="keyword">return</span> dataset</span><br></pre></td></tr></table></figure>
-<p>CustomDatasetDataLoader()类的定义：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">CustomDatasetDataLoader</span><span class="params">()</span>:</span></span><br><span class="line">    <span class="string">"""Wrapper class of Dataset class that performs multi-threaded data loading"""</span></span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize this class</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        step1:</span></span><br><span class="line"><span class="string">            create a dataset instance given the name [dataset_mode]</span></span><br><span class="line"><span class="string">            这里的dataset_mode在base_option中定义，即aligned还是unaligned</span></span><br><span class="line"><span class="string">        step2:</span></span><br><span class="line"><span class="string">            create a multi-threaded data loader.</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        self.opt = opt</span><br><span class="line">        dataset_class = find_dataset_using_name(opt.dataset_mode)</span><br><span class="line">        self.dataset = dataset_class(opt)</span><br><span class="line">        print(<span class="string">"dataset [%s] was created."</span> % type(self.dataset).__name__)</span><br><span class="line">        self.dataloader = torch.utils.data.DataLoader(</span><br><span class="line">            self.dataset,</span><br><span class="line">            batch_size=opt.batch_size,</span><br><span class="line">            shuffle=<span class="keyword">not</span> opt.serial_batches, <span class="comment">#shuffle的意思是洗乱数据，当选择为有序batch采样数据时，shuffle设置为false</span></span><br><span class="line">            num_workers=int(opt.num_threads)</span><br><span class="line">        )</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">load_data</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> self   </span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> min(len(self.dataset), self.opt.max_dataset_size)</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__iter__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""Return a batch of data"""</span>  </span><br><span class="line">        <span class="keyword">for</span> i, data <span class="keyword">in</span> enumerate(self.dataloader):</span><br><span class="line">            <span class="keyword">if</span> i * self.opt.batch_size &gt;= self.opt.max_dataset_size:</span><br><span class="line">                <span class="keyword">break</span></span><br><span class="line">            <span class="keyword">yield</span> data <span class="comment"># yield类似于return，返回一个值，用于接收数据；与return不同的在于可以记住上一次返回的位置，下次迭代则从这个位置后开始</span></span><br></pre></td></tr></table></figure>
-<ul>
-<li>base_dataset.py<br>定义了dataset的超类，本身继承自PyTorch的data.Dataset类，重写了子类需要继承的方法：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">BaseDataset</span><span class="params">(data.Dataset, ABC)</span>:</span></span><br><span class="line">    <span class="string">"""This class is the abstract class (ABC) for datasets.</span></span><br><span class="line"><span class="string">    To create a subclass,you need to implement the following four functions:</span></span><br><span class="line"><span class="string">    -- &lt;__init__&gt;:                      initialize the class, first call BaseDataset.__init__(self,opt)</span></span><br><span class="line"><span class="string">    -- &lt;__len__&gt;:                       return the size of dataset.</span></span><br><span class="line"><span class="string">    -- &lt;__getitem__&gt;:                   get a data point.</span></span><br><span class="line"><span class="string">    -- &lt;modify_commandline_options&gt;:    (optionally) add dataset-specific opotions and set default options.</span></span><br><span class="line"><span class="string">    """</span>   </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize the class; save the options in the class</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            opt (Option class): stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">        """</span>                 </span><br><span class="line">        self.opt = opt</span><br><span class="line">        self.root = opt.dataroot</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">modify_commandline_options</span><span class="params">(parser, is_train)</span>:</span></span><br><span class="line">        <span class="string">"""Add new dataset-specific options, and rewrite default values for existing options.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            parser : original option parser</span></span><br><span class="line"><span class="string">            is_train (bool): whether training phase or test phase. You can use this flag to add training-specific or test-specific options.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            the modified parser</span></span><br><span class="line"><span class="string">        """</span>            </span><br><span class="line">        <span class="keyword">return</span> parser</span><br><span class="line">    </span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="string">"""Return the total number of images in the dataset"""</span>     </span><br><span class="line">        <span class="keyword">return</span> <span class="number">0</span></span><br><span class="line"></span><br><span class="line"><span class="meta">    @abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        <span class="string">"""Return a data point and its meta data information.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            index (int): a random integer for data indexing</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            a directory of data with their names. It ususally contains the data itself and the metadata information.</span></span><br><span class="line"><span class="string">        """</span>                               </span><br><span class="line">        <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>以及一些数据处理的函数，如：放缩、旋转等:</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_params</span><span class="params">(opt, size)</span>:</span></span><br><span class="line">    <span class="comment"># 得到数据预处理的参数</span></span><br><span class="line">    w, h = size</span><br><span class="line">    new_h = h</span><br><span class="line">    new_w = w</span><br><span class="line">    <span class="keyword">if</span> opt.preprocess == <span class="string">'resize_and_crop'</span>:</span><br><span class="line">        new_h = new_w = opt.load_size</span><br><span class="line">    <span class="keyword">elif</span> opt.preprocess == <span class="string">'scale_width_and_crop'</span>:</span><br><span class="line">        new_w = opt.load_size</span><br><span class="line">        new_h = opt.load_size * h // w</span><br><span class="line">    <span class="comment"># 随机裁剪的位置</span></span><br><span class="line">    x = random.randint(<span class="number">0</span>, np.maximum(<span class="number">0</span>, new_w - opt.crop_size))</span><br><span class="line">    y = random.randint(<span class="number">0</span>, np.maximum(<span class="number">0</span>, new_h - opt.crop_size))</span><br><span class="line">    <span class="comment"># 图像翻转的概率</span></span><br><span class="line">    flip = random.random() &gt; <span class="number">0.5</span></span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> &#123;<span class="string">'crop_pos:'</span>:(x, y), <span class="string">'flip:'</span>: flip&#125;</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_transform</span><span class="params">(opt, params=None, grayscale=False, method=Image.BICUBIC, convert=True)</span>:</span></span><br><span class="line">    transform_list = []</span><br><span class="line">    <span class="keyword">if</span> grayscale:</span><br><span class="line">        transform_list.append(transforms.Grayscale(<span class="number">1</span>))</span><br><span class="line">    <span class="keyword">if</span> <span class="string">'resize'</span> <span class="keyword">in</span> opt.preprocess:</span><br><span class="line">        osize = [opt.load_size, opt.load_size]</span><br><span class="line">        transform_list.append(transforms.Resize(osize, method))</span><br><span class="line">    <span class="keyword">elif</span> <span class="string">'scale_width'</span> <span class="keyword">in</span> opt.preprocess:</span><br><span class="line">        transform_list.append(transforms.Lambda(<span class="keyword">lambda</span> img: __scale_width(img, opt.load_size, method)))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="string">'crop'</span> <span class="keyword">in</span> opt.preprocess:</span><br><span class="line">        <span class="keyword">if</span> params <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            transform_list.append(transforms.RandomCrop(opt.crop_size))</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            transform_list.append(transforms.Lambda(<span class="keyword">lambda</span> img: __crop(img, params[<span class="string">'crop_pos'</span>], opt.crop_size)))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> opt.preprocess == <span class="string">'none'</span>:</span><br><span class="line">        transform_list.append(transforms.Lambda(<span class="keyword">lambda</span> img: __make_power_2(img, base=<span class="number">4</span>, method=method)))</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> opt.no_flip:</span><br><span class="line">        <span class="keyword">if</span> params <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">            transform_list.append(transforms.RandomHorizontalFlip())</span><br><span class="line">        <span class="keyword">elif</span> params[<span class="string">'flip'</span>]:</span><br><span class="line">            transform_list.append(transforms.Lambda(<span class="keyword">lambda</span> img: __flip(img, params[<span class="string">'flip'</span>])))</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> convert:</span><br><span class="line">        transform_list += [transforms.ToTensor(),</span><br><span class="line">                           transforms.Normalize((<span class="number">0.5</span>,<span class="number">0.5</span>,<span class="number">0.5</span>),(<span class="number">0.5</span>,<span class="number">0.5</span>,<span class="number">0.5</span>))]</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> transforms.Compose(transform_list)</span><br></pre></td></tr></table></figure>
-<p>其中，get_params是得到图像随机裁剪和翻转的参数，get_transform则是根据opt整合所有需要进行的预处理操作。torchvision.transforms有22个方法用于预处理操作，这里的GrayScale是转化为灰度图；Resize可指插值算法来重置图像的分辨率，用到的Image.BICUBIC是双三次插值算法；这里的convert操作为转化为张量后按通道进行归一化操作，Lambda表达式可用于自定义匿名方法，下面是这几个匿名方法的定义：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__make_power_2</span><span class="params">(img, base, method=Image.BICUBIC)</span>:</span></span><br><span class="line">    ow, oh = img.size</span><br><span class="line">    h = int(round(oh / base) * base)</span><br><span class="line">    w = int(round(ow / base) * base)</span><br><span class="line">    <span class="keyword">if</span> (h == oh) <span class="keyword">and</span> (w == ow):</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line">    </span><br><span class="line">    __print_size_warning(ow, oh, w, h)</span><br><span class="line">    <span class="keyword">return</span> img.resize((w,h), method)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__scale_width</span><span class="params">(img, target_width, method=Image.BICUBIC)</span>:</span></span><br><span class="line">    ow, oh = img.size</span><br><span class="line">    <span class="keyword">if</span> (ow == target_width):</span><br><span class="line">        <span class="keyword">return</span> img</span><br><span class="line">    w = target_width</span><br><span class="line">    h = int(target_width * oh / ow)</span><br><span class="line">    <span class="keyword">return</span> img.resize((w,h), method)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__crop</span><span class="params">(img, pos, size)</span>:</span></span><br><span class="line">    ow, oh = img.size</span><br><span class="line">    x1, y1 = pos</span><br><span class="line">    tw, th = size</span><br><span class="line">    <span class="keyword">if</span> (ow &gt; tw <span class="keyword">or</span> oh &gt; th):</span><br><span class="line">        <span class="keyword">return</span> img.crop((x1, y1, x1+tw, y1+th))</span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__flip</span><span class="params">(img, flip)</span>:</span></span><br><span class="line">    <span class="keyword">if</span> flip:</span><br><span class="line">        <span class="keyword">return</span> img.transpose(Image.FLIP_LEFT_RIGHT)</span><br><span class="line">    <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__print_size_warning</span><span class="params">(ow, oh, w, h)</span>:</span></span><br><span class="line">	<span class="keyword">if</span> <span class="keyword">not</span> hasattr(__print_size_warning, <span class="string">'has_printed'</span>):</span><br><span class="line">        print(<span class="string">"The image size needs to be a multiple of 4. "</span></span><br><span class="line">              <span class="string">"The loaded image size was (%d, %d), so it was adjusted to "</span></span><br><span class="line">              <span class="string">"(%d, %d). This adjustment will be done to all images "</span></span><br><span class="line">              <span class="string">"whose sizes are not multiples of 4"</span> % (ow, oh, w, h))</span><br><span class="line">        __print_size_warning.has_printed = <span class="keyword">True</span></span><br></pre></td></tr></table></figure>
-<p>总结定义dataset类的一般方法：</p>
-<pre><code>1. Get a random image path
-2. Load the data from disk
-3. convert data to ptorch tensor, can use transform
-4. return a data point as a directory
-</code></pre><ul>
-<li>image_folder.py<br>同样包含一个继承了Dataset类的ImageFolder类：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">ImageFolder</span><span class="params">(data.Dataset)</span>:</span></span><br><span class="line">    <span class="string">"""通过指定的路径和变换操作返回图片数据集"""</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, root, transform=None, return_paths=False, loader=default_loader)</span>:</span></span><br><span class="line">        imgs = make_dataset(root)</span><br><span class="line">        <span class="keyword">if</span> len(imgs) == <span class="number">0</span>:</span><br><span class="line">            <span class="keyword">raise</span> (RuntimeError(<span class="string">"Found 0 images in: "</span> + root + <span class="string">"\n"</span></span><br><span class="line">                                <span class="string">"Supported image extensions are: "</span> + <span class="string">","</span>.join(IMG_EXTENSIONS)))</span><br><span class="line"></span><br><span class="line">        self.root = root</span><br><span class="line">        self.imgs = imgs</span><br><span class="line">        self.transform = transform</span><br><span class="line">        self.return_paths = return_paths</span><br><span class="line">        self.loader = loader</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        path = self.imgs[index]</span><br><span class="line">        img = self.loader(path)</span><br><span class="line">        <span class="keyword">if</span> self.transform <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            img = self.transform(img)</span><br><span class="line">        <span class="keyword">if</span> self.return_paths:</span><br><span class="line">            <span class="keyword">return</span> img, path</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            <span class="keyword">return</span> img</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.imgs)</span><br></pre></td></tr></table></figure>
-<p>还定义了其他全局函数，其中make_dataset用于从当前目录和子目录加载图片，返回的是一个包含图片路径的list：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">IMG_EXTENSIONS = [</span><br><span class="line">    <span class="string">'.jpg'</span>, <span class="string">'.JPG'</span>, <span class="string">'.jpeg'</span>, <span class="string">'.JPEG'</span>,</span><br><span class="line">    <span class="string">'.png'</span>, <span class="string">'.PNG'</span>, <span class="string">'.ppm'</span>, <span class="string">'.PPM'</span>, <span class="string">'.bmp'</span>, <span class="string">'.BMP'</span>,</span><br><span class="line">]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">is_image_file</span><span class="params">(filename)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> any(filename.endswith(extension) <span class="keyword">for</span> extension <span class="keyword">in</span> IMG_EXTENSIONS)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">make_dataset</span><span class="params">(dir, max_dataset_size=float<span class="params">(<span class="string">"inf"</span>)</span>)</span>:</span></span><br><span class="line">    images = []</span><br><span class="line">    <span class="keyword">assert</span> os.path.isdir(dir), <span class="string">'%s is not a valid directory'</span> % dir</span><br><span class="line">    <span class="keyword">for</span> root, _, fnames <span class="keyword">in</span> sorted(os.walk(dir)):</span><br><span class="line">        <span class="keyword">for</span> fname <span class="keyword">in</span> fnames:</span><br><span class="line">            <span class="keyword">if</span>(is_image_file(fname)):</span><br><span class="line">                path = os.path.join(root, fname)</span><br><span class="line">                images.append(path)</span><br><span class="line">    <span class="keyword">return</span> images[:min(max_dataset_size, len(images))]</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> imgs</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">default_loader</span><span class="params">(path)</span>:</span></span><br><span class="line">    <span class="keyword">return</span> Image.open(path).convert(<span class="string">'RGB'</span>)</span><br></pre></td></tr></table></figure>
-<p>其中，os.walk()是很常见的遍历目录的用法。</p>
-<ul>
-<li>single_dataset.py<br>该类是继承了BaseDataset的最简单子类，同样重写了基本方法，并使用到image_folder.py中定义的make_dataset()，可以指定路径来加载图片：</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">SingleDataset</span><span class="params">(BaseDataset)</span>:</span></span><br><span class="line">    <span class="string">"""This class can load a set of image specified by the path --dataroot /path/to/data</span></span><br><span class="line"><span class="string">    It can be used for generating CycleGAN results only for one side with the model option '-model test'.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize this dataset class</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            opt (option class): stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">        """</span> </span><br><span class="line">        BaseDataset.__init__(self, opt)</span><br><span class="line">        self.A_paths = sorted(make_dataset(opt.dataroot, opt.max_dataset_size))</span><br><span class="line">        input_nc = self.opt.output_nc <span class="keyword">if</span> self.opt.directoin == <span class="string">'BtoA'</span> <span class="keyword">else</span> self.opt.input_nc</span><br><span class="line">        self.transform = get_transform(opt, grayscale=(input_nc == <span class="number">1</span>))       </span><br><span class="line">      </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        <span class="string">"""Return a data point and its metadata information</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            index (int): a random integer for data indexing</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            A dictionary that contains A and A_paths</span></span><br><span class="line"><span class="string">            A (tensor): an image in one domain</span></span><br><span class="line"><span class="string">            A_paths (str): the path of the image</span></span><br><span class="line"><span class="string">        """</span>        </span><br><span class="line">        A_path = self.A_paths[index]</span><br><span class="line">        A_img = Image.open(A_path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">        A = self.transform(A_img)</span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">'A'</span>: A, <span class="string">'A_paths:'</span>: A_path&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.A_paths)</span><br></pre></td></tr></table></figure>
-<ul>
-<li>template_dataset.py<br>提供给用户自定义数据集的模板类，重写basedataset类中的方法，使用数据集时需要指定：’–dataset_mode template’，并且文件名和这个选项参数保持一致，创建的类名也应该是[dataset_mode]Dataset，文件名为[dataset_mode]_dataset.py。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br><span class="line">69</span><br><span class="line">70</span><br><span class="line">71</span><br><span class="line">72</span><br><span class="line">73</span><br><span class="line">74</span><br><span class="line">75</span><br><span class="line">76</span><br><span class="line">77</span><br><span class="line">78</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""Dataset class template</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">This module provides a template for users to implement custom datasets.</span></span><br><span class="line"><span class="string">You can specify '--dataset_mode template' to use this dataset.</span></span><br><span class="line"><span class="string">The class name should be consistent with both the filename and its dataset_mode option.</span></span><br><span class="line"><span class="string">The filename should be &lt;dataset_mode&gt;_dataset.py</span></span><br><span class="line"><span class="string">The class name should be &lt;Dataset_mode&gt;Dataset.py</span></span><br><span class="line"><span class="string">You need to implement the following functions:</span></span><br><span class="line"><span class="string">    -- &lt;modify_commandline_options&gt;:　Add dataset-specific options and rewrite default values for existing options.</span></span><br><span class="line"><span class="string">    -- &lt;__init__&gt;: Initialize this dataset class.</span></span><br><span class="line"><span class="string">    -- &lt;__getitem__&gt;: Return a data point and its metadata information.</span></span><br><span class="line"><span class="string">    -- &lt;__len__&gt;: Return the number of images.</span></span><br><span class="line"><span class="string">"""</span></span><br><span class="line"><span class="keyword">from</span> data.base_dataset <span class="keyword">import</span> BaseDataset, get_transform</span><br><span class="line"><span class="keyword">from</span> data.image_folder <span class="keyword">import</span> make_dataset</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">TemplateDataset</span><span class="params">(BaseDataset)</span>:</span></span><br><span class="line">    <span class="string">"""A template dataset class for you to implement custom datasets."""</span>    </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize the class</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            opt (Option class): Stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        A few things can be done here.</span></span><br><span class="line"><span class="string">        - save the options. (have been done in BaseDataset)</span></span><br><span class="line"><span class="string">        - get image path and meta information of the dataset.</span></span><br><span class="line"><span class="string">        - define the image transformatoin. </span></span><br><span class="line"><span class="string">        """</span>       </span><br><span class="line">        <span class="comment"># save the options and dataroot</span></span><br><span class="line">        BaseDataset.__init__(self, opt)</span><br><span class="line">        <span class="comment"># get the image path</span></span><br><span class="line">        self.image_paths = sorted(make_dataset(self.root, opt.max_dataset_size))</span><br><span class="line">        <span class="comment"># define the default transform function</span></span><br><span class="line">        self.transform = get_transform(opt)</span><br><span class="line">        </span><br><span class="line">    </span><br><span class="line"><span class="meta">    @staticmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">modify_commandline_options</span><span class="params">(parser, is_train)</span>:</span></span><br><span class="line">        <span class="string">"""Add new dataset-specific options, and rewrite default values for existing options.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            parser : original option parser</span></span><br><span class="line"><span class="string">            is_train (bool): whether training phase or test phase. You can use this flag to add training-specific or test-specific options.</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            the modified parser</span></span><br><span class="line"><span class="string">        """</span>  </span><br><span class="line">        parser.add_argument(<span class="string">'--new_dataset_option'</span>, type=float, default=<span class="number">1.0</span>, help=<span class="string">'new dataset option'</span>)</span><br><span class="line">        parser.set_defaults(max_dataset_size=<span class="number">10</span>, new_dataset_option=<span class="number">2.0</span>)</span><br><span class="line">        <span class="keyword">return</span> parser</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.image_paths)</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        <span class="string">"""Return a data point and its metadata information</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            index (int): a random integer for data indexing</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns:</span></span><br><span class="line"><span class="string">            a directory of data with their names</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Step1: get a random image path</span></span><br><span class="line"><span class="string">        Step2: load the data from the disk</span></span><br><span class="line"><span class="string">        Step3: convert the data to Pytorch tensor</span></span><br><span class="line"><span class="string">        Step4: return a data point as a directory</span></span><br><span class="line"><span class="string">        """</span>        </span><br><span class="line">        path = self.image_paths[index]</span><br><span class="line">        image = Image.open(path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">        data = self.transform(image)</span><br><span class="line">        data_A = <span class="keyword">None</span> <span class="comment"># needs to be a tensor</span></span><br><span class="line">        data_B = <span class="keyword">None</span> <span class="comment"># needs to be a tensor</span></span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">'data_A:'</span>: data_A, <span class="string">'data_B:'</span>: data_B, <span class="string">'path:'</span>: path&#125;</span><br></pre></td></tr></table></figure>
-<ul>
-<li>alinged_dataset.py和unaligned_dataset.py<br>aligned代表已配对的训练数据集，unaligned代表非配对训练集；<br>在配对数据集中，训练集需要在目录’/path/to/data/train’下包含图片对{A,B}，测试目录为’/path/to/data/test’；<br>在非配对数据集中，训练集需要准备两个目录：’/path/to/data/trainA’和’/path/to/data/trainB’，指定dataroot时只需’–dataroot /path/to/data’，测试集同样如此。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os.path</span><br><span class="line"><span class="keyword">import</span> random</span><br><span class="line"><span class="keyword">import</span> torchvision.transforms <span class="keyword">as</span> transforms</span><br><span class="line"><span class="keyword">from</span> data.base_dataset <span class="keyword">import</span> BaseDataset, get_transform, get_params</span><br><span class="line"><span class="keyword">from</span> image_folder <span class="keyword">import</span> make_dataset</span><br><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">AlignedDataset</span><span class="params">(BaseDataset)</span>:</span></span><br><span class="line">    <span class="string">"""A dataset class for paired data</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    It assumes that the directory '/path/to/data/train' contains image pairs in the form of &#123;A,B&#125;</span></span><br><span class="line"><span class="string">    During test time, you need to prepare a directory '/path/to/data/test/'.</span></span><br><span class="line"><span class="string">    """</span>    </span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize this dataset class</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            opt (Option class): stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">        """</span>        </span><br><span class="line">        BaseDataset.__init__(self, opt)</span><br><span class="line">        self.dir_AB = os.path.join(opt.dataroot, opt.phase) <span class="comment"># get the image directory, phase: [train | test]</span></span><br><span class="line">        self.AB_paths = sorted(make_dataset(self.dir_AB, opt.max_dataset_size)) <span class="comment"># get image paths</span></span><br><span class="line">        <span class="keyword">assert</span> (self.opt.load_size &gt;= self.opt.crop_size)</span><br><span class="line">        self.input_nc = self.opt.output_nc <span class="keyword">if</span> self.opt.direction == <span class="string">'BtoA'</span> <span class="keyword">else</span> self.opt.input_nc</span><br><span class="line">        self.output_nc = self.opt.input_nc <span class="keyword">if</span> self.opt.direction == <span class="string">'BtoA'</span> <span class="keyword">else</span> self.opt.output_nc</span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self, index)</span>:</span></span><br><span class="line">        <span class="string">"""Return a data point and its meta data information.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            index (int): a random integer for data indexing</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns a dictionary that contains A, B, A_paths, B_paths</span></span><br><span class="line"><span class="string">        A (tensor): an image in the input domain</span></span><br><span class="line"><span class="string">        B (tensor): the corresponding image in output domain</span></span><br><span class="line"><span class="string">        A_paths (str): image paths</span></span><br><span class="line"><span class="string">        B_paths (str): image paths</span></span><br><span class="line"><span class="string">        """</span>        </span><br><span class="line">        <span class="comment"># read an image given a random integer index</span></span><br><span class="line">        AB_path = self.AB_paths[index]</span><br><span class="line">        AB = Image.open(AB_path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">        <span class="comment"># split AB image into A and B</span></span><br><span class="line">        w, h = AB.size</span><br><span class="line">        w2 = int(w / <span class="number">2</span>)</span><br><span class="line">        A = AB.crop((<span class="number">0</span>, <span class="number">0</span>, w2, h))</span><br><span class="line">        B = AB.crop((w2, <span class="number">0</span>, w, h))</span><br><span class="line"></span><br><span class="line">        <span class="comment"># apply the same transform to both A and B</span></span><br><span class="line">        transform_params = get_params(self.opt, A.size)</span><br><span class="line">        A_transform = get_transform(self.opt, transform_params, grayscale=(self.input_nc == <span class="number">1</span>))</span><br><span class="line">        B_transform = get_transform(self.opt, transform_params, grayscale=(self.output_nc == <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">        A = A_transform(A)</span><br><span class="line">        B = B_transform(B)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">'A: '</span>: A, <span class="string">'B: '</span>: B, <span class="string">'A_path: '</span>: AB_path, <span class="string">'B_path: '</span>: AB_path&#125;</span><br><span class="line"></span><br><span class="line">    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> len(self.AB_paths)</span><br></pre></td></tr></table></figure>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">class</span> <span class="title">UnalignedDataset</span><span class="params">(BaseDataset)</span>:</span></span><br><span class="line">    <span class="string">"""</span></span><br><span class="line"><span class="string">    This dataset class can load unaligned/unpaired datasets.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    It requires two directories to host training images from domain A '/path/to/data/trainA'</span></span><br><span class="line"><span class="string">    and from domain B '/path/to/data/trainB' respectively.</span></span><br><span class="line"><span class="string">    You can train the model with the dataset flag '--dataroot /path/to/data'.</span></span><br><span class="line"><span class="string">    Similarly, you need to prepare two directories:</span></span><br><span class="line"><span class="string">    '/path/to/data/testA' and '/path/to/data/testB' during test time.</span></span><br><span class="line"><span class="string">    """</span>  </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">        <span class="string">"""Initialize this dataset class.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Parameters:</span></span><br><span class="line"><span class="string">            opt (Option class) -- stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">        """</span></span><br><span class="line">        BaseDataset.__init__(self, opt)</span><br><span class="line">        self.dir_A = os.path.join(opt.dataroot, opt.phase + <span class="string">'A'</span>) <span class="comment"># create a path '/path/to/data/trainA'</span></span><br><span class="line">        self.dir_B = os.path.join(opt.dataroot, opt.phase + <span class="string">'B'</span>) <span class="comment"># craete a path '/path/to/data/trainB'</span></span><br><span class="line"></span><br><span class="line">        self.A_paths = sorted(make_dataset(self.dir_A, opt.max_dataset_size)) <span class="comment"># load images from '/path/to/data/trainA'</span></span><br><span class="line">        self.B_paths = sorted(make_dataset(self.dir_B, opt.max_dataset_size)) <span class="comment"># load images from '/path/to/data/trainB'</span></span><br><span class="line">        self.A_size = len(self.A_paths) <span class="comment"># get the size of dataset A</span></span><br><span class="line">        self.B_size = len(self.B_paths) <span class="comment"># get the size of dataset B</span></span><br><span class="line">        btoA = self.opt.direction == <span class="string">'BtoA'</span></span><br><span class="line">        input_nc = self.opt.output_nc <span class="keyword">if</span> btoA <span class="keyword">else</span> self.opt.input_nc <span class="comment"># get the number of channels of input image</span></span><br><span class="line">        output_nc = self.opt.input_nc <span class="keyword">if</span> btoA <span class="keyword">else</span> self.opt.output_nc <span class="comment"># get the number of channels of output image</span></span><br><span class="line">        self.transform_A = get_transform(self.opt, grayscale=(input_nc == <span class="number">1</span>))</span><br><span class="line">        self.transform_B = get_transform(self.opt, grayscale=(output_nc == <span class="number">1</span>))</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__getitem__</span><span class="params">(self,index)</span>:</span></span><br><span class="line">        <span class="string">"""Return a data point and its meta data information.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">        Args:</span></span><br><span class="line"><span class="string">            index (int): a random integer for data indexing</span></span><br><span class="line"><span class="string">        </span></span><br><span class="line"><span class="string">        Returns a dictionary that contains A, B, A_paths, B_paths</span></span><br><span class="line"><span class="string">        A (tensor): an image in the input domain</span></span><br><span class="line"><span class="string">        B (tensor): the corresponding image in output domain</span></span><br><span class="line"><span class="string">        A_paths (str): image paths</span></span><br><span class="line"><span class="string">        B_paths (str): image paths</span></span><br><span class="line"><span class="string">        """</span> </span><br><span class="line">        A_path = self.A_paths[index % self.A_size] <span class="comment"># make sure the index within the range</span></span><br><span class="line">        <span class="keyword">if</span> self.opt.serial_batches: </span><br><span class="line">            index_B = index % self.B_size</span><br><span class="line">        <span class="keyword">else</span>: <span class="comment"># randomize the index to avoid fixed pairs</span></span><br><span class="line">            index_B = random.randint(<span class="number">0</span>, self.B_size - <span class="number">1</span>)</span><br><span class="line">        B_path = self.B_paths[indexB]</span><br><span class="line">        A_img = Image.open(A_path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">        B_img = Image.open(B_path).convert(<span class="string">'RGB'</span>)</span><br><span class="line">        <span class="comment"># apply image transformation</span></span><br><span class="line">        A = self.transform_A(A_img)</span><br><span class="line">        B = self.transform_B(B_img)</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> &#123;<span class="string">'A'</span>: A, <span class="string">'B'</span>: B, <span class="string">'A_paths'</span>: A_path, <span class="string">'B_paths'</span>: B_path&#125;</span><br><span class="line"></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">__len__</span><span class="params">(self)</span>:</span></span><br><span class="line">        <span class="keyword">return</span> max(self.A_size, self.B_size)</span><br></pre></td></tr></table></figure>
-<h2 id="models"><a href="#models" class="headerlink" title="models"></a>models</h2><p>模型类包含了所有与目标函数、优化、网络架构的模块，是整个架构的核心。</p>
-<ul>
-<li><strong>init</strong>.py<br>实现了整个包与train、test脚本的交互接口，train.py和test.py里通过调用以下语句来创建网络模型：<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> models <span class="keyword">import</span> create_model</span><br><span class="line">model = create_model(opt)</span><br></pre></td></tr></table></figure>
-</li>
-</ul>
-<p>并根据opt来初始化模型：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">model.setup(opt)</span><br></pre></td></tr></table></figure></p>
-<p>find_model_using_name()用于model类的实例化并返回，会导入”models/[model_name]_model.py”</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">find_model_using_name</span><span class="params">(model_name)</span>:</span></span><br><span class="line">    <span class="string">"""Import the module "models/[model_name]_model.py".</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    In the file, the class called DatasetNameModel() will</span></span><br><span class="line"><span class="string">    be instantiated. It has to be a subclass of BaseModel,</span></span><br><span class="line"><span class="string">    and it is case-insensitive</span></span><br><span class="line"><span class="string">    """</span>   </span><br><span class="line">    model_filename = <span class="string">"models."</span> + model_name + <span class="string">"_model"</span></span><br><span class="line">    modellib = importlib.import_module(model_filename)</span><br><span class="line">    model = <span class="keyword">None</span></span><br><span class="line">    target_model_name = model_name.replace(<span class="string">'_'</span>,<span class="string">''</span>) + <span class="string">'model'</span></span><br><span class="line">    <span class="keyword">for</span> name, cls <span class="keyword">in</span> modellib.__dict__.items():</span><br><span class="line">        <span class="keyword">if</span> name.lower() == target_model_name.lower() <span class="keyword">and</span> issubclass(cls, BaseModel):</span><br><span class="line">            model = cls</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span> model <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">        print(<span class="string">"In %s.py, there should be a subclass of BaseModel with class name that matches %s in lowercase."</span> % (model_filename, target_model_name))</span><br><span class="line">        exit(<span class="number">0</span>)</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> model</span><br></pre></td></tr></table></figure>
-<p>create_model()调用find_model_using_name()创建模型实例，并返回给train或test脚本</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">create_model</span><span class="params">(opt)</span>:</span></span><br><span class="line">    <span class="string">"""Create a model given the option.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    This function warps the class CusstomDatasetDataLoader.</span></span><br><span class="line"><span class="string">    This is the main interface between this package and 'train.py'/'test.py'</span></span><br><span class="line"><span class="string">    """</span>  </span><br><span class="line">    model = find_model_using_name(opt.model)</span><br><span class="line">    instance = model(opt)</span><br><span class="line">    print(<span class="string">"model [%s] was created."</span> % type(instance).__name__)</span><br><span class="line">    <span class="keyword">return</span> instance</span><br></pre></td></tr></table></figure>
-<ul>
-<li>base_model.py<br>定义BaseModel超类，用于被其他model类继承。它定义了一些helper functions：保存/加载模型，更新优化器，计算当前损失等等。</li>
-</ul>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="string">"""This class is an abstract base class (ABC) for models.</span></span><br><span class="line"><span class="string">    To create a subclass, you need to implement the following five functions:</span></span><br><span class="line"><span class="string">        -- &lt;__init__&gt;:                      initialize the class; first call BaseModel.__init__(self, opt).</span></span><br><span class="line"><span class="string">        -- &lt;set_input&gt;:                     unpack data from dataset and apply preprocessing.</span></span><br><span class="line"><span class="string">        -- &lt;forward&gt;:                       produce intermediate results.</span></span><br><span class="line"><span class="string">        -- &lt;optimize_parameters&gt;:           calculate losses, gradients, and update network weights.</span></span><br><span class="line"><span class="string">        -- &lt;modify_commandline_options&gt;:    (optionally) add model-specific options and set default options.</span></span><br><span class="line"><span class="string">"""</span></span><br></pre></td></tr></table></figure>
-<p>init()函数根据传进来的opt对model进行初始化，包括加速设备、训练损失、优化器定义等参数。</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__init__</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">    <span class="string">"""Initialize the BaseModel class.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Parameters:</span></span><br><span class="line"><span class="string">        opt (Option class)-- stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    When creating your custom class, you need to implement your own initialization.</span></span><br><span class="line"><span class="string">    In this fucntion, you should first call &lt;BaseModel.__init__(self, opt)&gt;</span></span><br><span class="line"><span class="string">    Then, you need to define four lists:</span></span><br><span class="line"><span class="string">        -- self.loss_names (str list):          specify the training losses that you want to plot and save.</span></span><br><span class="line"><span class="string">        -- self.model_names (str list):         specify the images that you want to display and save.</span></span><br><span class="line"><span class="string">        -- self.visual_names (str list):        define networks used in our training.</span></span><br><span class="line"><span class="string">        -- self.optimizers (optimizer list):    define and initialize optimizers. You can define one optimizer for each network. If two networks are updated at the same time, you can use itertools.chain to group them. See cycle_gan_model.py for an example.</span></span><br><span class="line"><span class="string">    """</span></span><br><span class="line">    self.opt = opt</span><br><span class="line">    self.gpu_ids = opt.gpu_ids</span><br><span class="line">    self.isTrain = opt.isTrain</span><br><span class="line">    self.device = torch.device(<span class="string">'cuda:&#123;&#125;'</span>.format(self.gpu_ids[<span class="number">0</span>])) <span class="keyword">if</span> self.gpu_ids <span class="keyword">else</span> torch.device(<span class="string">'cpu'</span>) <span class="comment"># get device name: GPU or CPU</span></span><br><span class="line">    self.save_dir = os.path.join(opt.checkpoints_dir, opt.name) <span class="comment"># save all the checkpoints to save_dir</span></span><br><span class="line">    <span class="keyword">if</span> opt.preprocess != <span class="string">'scale_width'</span>: <span class="comment"># with [scale_width], input image have different sizes, which hurts the performance of cudnn.benchmark</span></span><br><span class="line">        torch.backends.cudnn.benchmark = <span class="keyword">True</span></span><br><span class="line">    self.loss_names = []</span><br><span class="line">    self.model_names = []</span><br><span class="line">    self.visual_names = []</span><br><span class="line">    self.optimizers = []</span><br><span class="line">    self.image_paths = []</span><br><span class="line">    self.metric = <span class="number">0</span> <span class="comment"># used for learning rate policy 'plateau'</span></span><br></pre></td></tr></table></figure>
-<p>与data类中类似，同样定义一个静态方法modify_commandline_options()来修改命令行参数，返回修改后的解析器parser</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@staticmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">modify_commandline_options</span><span class="params">(parser, is_train)</span>:</span></span><br><span class="line">    <span class="string">"""Add new model-specific options, and rewrite default values for existing options.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        parser: original option parser</span></span><br><span class="line"><span class="string">        is_train (bool): whether training phase or test phase. You can use this flag to add training-specific or test-specific options.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Returns:</span></span><br><span class="line"><span class="string">        the modified parser.</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">return</span> parser</span><br></pre></td></tr></table></figure>
-<p>定义用于加载数据、定义loss的抽象方法：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@abstractmethod</span></span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">set_input</span><span class="params">(self, input)</span>:</span></span><br><span class="line">    <span class="string">"""Unpack input data from the dataloader and perform necessary pre-processing steps.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        input (dict): includes the data itself and its metadata information.</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">pass</span></span><br><span class="line"></span><br><span class="line"><span class="meta">@abstractmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">forward</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Run forward pass; called by both functions &lt;optimize_parameters&gt; and &lt;test&gt;."""</span> </span><br><span class="line">    <span class="keyword">pass</span> </span><br><span class="line"></span><br><span class="line"><span class="meta">@abstractmethod</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">optimize_parameters</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Calculate losses, gradients, and update network weights; called in every training iteration </span></span><br><span class="line"><span class="string">    """</span>           </span><br><span class="line">    <span class="keyword">pass</span></span><br></pre></td></tr></table></figure>
-<p>加载模型，打印模型及参数：</p>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_up</span><span class="params">(self, opt)</span>:</span></span><br><span class="line">    <span class="string">"""Load and print networks; create schedulers</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        opt (Option class): stores all the experiment flags; needs to be a subclass of BaseOptions</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">if</span> self.isTrain:</span><br><span class="line">        self.schedulers = [network.get_scheduler(optimizer, opt) <span class="keyword">for</span> optimizer <span class="keyword">in</span> self.optimizers]</span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> self.isTrain <span class="keyword">or</span> opt.continue_train:</span><br><span class="line">        load_suffix = <span class="string">'iter_%d'</span> % opt.load_iter <span class="keyword">if</span> opt.load_iter &gt; <span class="number">0</span> <span class="keyword">else</span> opt.epoch</span><br><span class="line">        self.load_networks(load_suffix)</span><br><span class="line">    self.print_networks(opt.verbose)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">load_networks</span><span class="params">(self, epoch)</span>:</span></span><br><span class="line">    <span class="string">"""Load all the networks from the disk.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        epoch (int): curent epoch; used in the file name '%s_net_%s.pth' % (epoch, name)</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.model_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            load_filename = <span class="string">'%s_net_%s.pth'</span> % (epoch, name)</span><br><span class="line">            load_path = os.path.join(self.save_dir, load_filename)</span><br><span class="line">            net = getattr(self, <span class="string">'net'</span> + name)</span><br><span class="line">            <span class="keyword">if</span> isinstance(net, torch.nn.DataParallel):</span><br><span class="line">                net = net.module</span><br><span class="line">            print(<span class="string">'Loading the model from %s'</span> % load_path)</span><br><span class="line">            <span class="comment"># if you are using PyTorch newer than 0.4, you can remove str() on self.device</span></span><br><span class="line">            state_dict = torch.load(load_path, map_location=self.device)</span><br><span class="line">            <span class="keyword">if</span> hasattr(state_dict, <span class="string">'_metadata'</span>):</span><br><span class="line">                <span class="keyword">del</span> state_dict._metadata</span><br><span class="line"></span><br><span class="line">            <span class="comment"># patch InstanceNorm checkpoints prior to 0.4</span></span><br><span class="line">            <span class="keyword">for</span> key <span class="keyword">in</span> list(state_dict.keys()):</span><br><span class="line">                self.__patch_instance_norm_state_dict(state_dict, net, key.split(<span class="string">'.'</span>))</span><br><span class="line">            net.load_state_dict(state_dict)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">print_networks</span><span class="params">(self, verbose)</span>:</span></span><br><span class="line">    <span class="string">"""Print the total number of parameters in the network and (if verbose) network architecture</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        verbose (bool): if true, print the network architecture</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    print(<span class="string">'---------- Networks initialized ------------'</span>)</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.model_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            net = getattr(self, <span class="string">'net'</span> + name)</span><br><span class="line">            num_params = <span class="number">0</span></span><br><span class="line">            <span class="keyword">for</span> param <span class="keyword">in</span> net.parameters():</span><br><span class="line">                num_params += param.numel</span><br><span class="line">            <span class="keyword">if</span> verbose:</span><br><span class="line">                print(net)</span><br><span class="line">            print(<span class="string">'[Network %s] Total number of parameters : %.3f M'</span> % (name, num_params / <span class="number">1e6</span>))</span><br><span class="line">    print(<span class="string">'--------------------------------------------'</span>)</span><br></pre></td></tr></table></figure>
-<p>其中：<br>1) torch.nn.DataParallel()用于多个GPU加速训练，指定的第一张卡占用显存更大，因为input是并行计算的，而output默认是在第一张卡。具体操作是将数据划分成多个子部分，送到不同的device中去，模型module则在每个device复制一份。当gpu_ids[0]被占用时，需要指定默认的可见device。<br>2) torch.load():解序列化一个pickled对象并加载到内存中，Pytorch中所有可学习的参数保存在model.parameters()中，state_dict是一个python字典，保存了各层与其参数张量之间的映射。</p>
-<p>测试阶段的函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">eval</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Make models eval mode during test time """</span>    </span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.model_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            net = getattr(self, <span class="string">'net'</span> + name)</span><br><span class="line">            net.eval()</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">test</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Forward function used in test time.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    This function wraps &lt;forward&gt; function in no_grad() so we don't save intermediate steps for backprop</span></span><br><span class="line"><span class="string">    It also calls &lt;compute_visuals&gt; to produce additional visualization results</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">with</span> torch.no_grad():</span><br><span class="line">        self.forward()</span><br><span class="line">        self.compute_visuals()</span><br></pre></td></tr></table></figure></p>
-<p>其中model.eval()代表不启用BatchNormalizatoin和Dropout</p>
-<p>更新学习率的函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">update_learning_rate</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Update learning rate for all networks; called at the end of every epoch"""</span>     </span><br><span class="line">    <span class="keyword">for</span> scheduler <span class="keyword">in</span> self.schedulers:</span><br><span class="line">        <span class="keyword">if</span> self.opt.lr_policy == <span class="string">'plateau'</span>:</span><br><span class="line">            scheduler.step(self.metric)</span><br><span class="line">        <span class="keyword">else</span>:</span><br><span class="line">            scheduler.step()</span><br><span class="line">    </span><br><span class="line">    lr = self.optimizers[<span class="number">0</span>].param_group[<span class="number">0</span>][<span class="string">'lr'</span>]</span><br><span class="line">    print(<span class="string">'learning rate = %.7f'</span> % lr)</span><br></pre></td></tr></table></figure></p>
-<p>optimizer.step()更新模型，用在每个Mini-batch里；scheduler.step()用于调整学习率，用在epoch中。</p>
-<p>获取当前可视化图片和loss的函数：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_current_visuals</span><span class="params">(self)</span>:</span></span><br><span class="line">    <span class="string">"""Return visualization images. train.py will display these images with visdom, and save the iamges to a HTML"""</span> </span><br><span class="line">    visual_ret = OrderedDict()</span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.visual_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            visual_ret[name] = getattr(self, name)</span><br><span class="line">    <span class="keyword">return</span> visual_ret</span><br><span class="line">   </span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_current_losses</span><span class="params">(self)</span>:</span>    </span><br><span class="line">    <span class="string">"""Return training losses / errors. train.py will print out these errors on console, and save them to a file"""</span>        </span><br><span class="line">    error_ret = OrderedDict()       </span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.loss_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            errors_ret[name] = float(getattr(self, <span class="string">'loss_'</span> + name)) <span class="comment"># float(...) works for both scalar tensor and float tensor</span></span><br><span class="line">    <span class="keyword">return</span> error_ret</span><br></pre></td></tr></table></figure></p>
-<p>这里面很多函数都用到getattr()和isinstance(),加上issubclass总结：<br>1) getattr是获取对象的属性值，注意这里第二个参数是字符串类型，getattr(x,’y’)返回的则是x.y<br>2) isinstance判断对象是否是某一类型<br>3) issubclass判断一个类是否继承另一个类</p>
-<p>保存网络模型：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">save_networks</span><span class="params">(self, epoch)</span>:</span></span><br><span class="line">    <span class="string">"""Save all the networks to the disk.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        epoch (int): current epoch; used in the file name '%s_net_%s.pth' % (epoch, name)</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">for</span> name <span class="keyword">in</span> self.model_names:</span><br><span class="line">        <span class="keyword">if</span> isinstance(name, str):</span><br><span class="line">            save_filename = <span class="string">'%s_net_%s.pth'</span> % (epoch, name)</span><br><span class="line">            save_path = os.path.join(self.save_dir, save_filename)</span><br><span class="line">            net = getattr(self, <span class="string">'net'</span> + name)</span><br><span class="line"></span><br><span class="line">            <span class="keyword">if</span> len(self.gpu_ids) &gt; <span class="number">0</span> <span class="keyword">and</span> torch.cuda.is_available():</span><br><span class="line">                torch.save(net.module.cpu().state_dict(), save_path) <span class="comment"># 为什么不是net.cpu().module?</span></span><br><span class="line">                net.cuda(self.gpu_ids[<span class="number">0</span>])</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                torch.save(net.cpu().state_dict(), save_path)</span><br></pre></td></tr></table></figure></p>
-<p>注意torch.save()的用法，第一个参数为state_dict，第二个参数为path,可以选择保存cpu的参数。</p>
-<p>关于Norm：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">__patch_instance_norm_state_dict</span><span class="params">(self, state_dict, module, keys, i=<span class="number">0</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Fix InstanceNorm checkopints incompatibility (prior to 0.4)"""</span>  </span><br><span class="line">    key = keys[i]</span><br><span class="line">    <span class="keyword">if</span> i + <span class="number">1</span> == len(keys): <span class="comment"># at the end, pointing to a parameter/buffer</span></span><br><span class="line">        <span class="keyword">if</span> module.__class__.__name__.startwith(<span class="string">'InstanceNorm'</span>) <span class="keyword">and</span> (key == <span class="string">'running_mean'</span> <span class="keyword">or</span> key == <span class="string">'running_var'</span>):</span><br><span class="line">            <span class="keyword">if</span> getattr(module, key) <span class="keyword">is</span> <span class="keyword">None</span>:</span><br><span class="line">                state_dict.pop(<span class="string">'.'</span>.join(keys))</span><br><span class="line">        <span class="keyword">if</span> module.__class__.__name__.startwith(<span class="string">'InstanceNorm'</span>) <span class="keyword">and</span> (key == <span class="string">'num_batches_tracked'</span>):</span><br><span class="line">            state_dict.pop(<span class="string">'.'</span>.join(keys))</span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        self.__patch_instance_norm_state_dict(state_dict, getattr(module, key), keys, i+<span class="number">1</span>)</span><br></pre></td></tr></table></figure></p>
-<p>输入图像: [N, C, H, W]<br>BatchNorm: [1, C, 1, 1]<br>InstanceNorm: [N, C, 1, 1]<br>经过实验，InstanceNorm层的weight, bias, running_mean, running_var总是None。代码中加载模型的时候对instanceNorm层进行了删除操作，因为pytrch之前的版本instanceNorm层是有running_mean和running_var的，在之后的版本修正了之后就不再需要了。</p>
-<p>设置网络是否需要梯度<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">set_requires_grad</span><span class="params">(self, nets, requires_grad=False)</span>:</span></span><br><span class="line">    <span class="string">"""Set requires_grad=False for all the networks to avoid unnecessary computations</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        nets (network list): a list of networks</span></span><br><span class="line"><span class="string">        requires_grad (bool, optional): whether the networks require gradients or not</span></span><br><span class="line"><span class="string">    """</span>        </span><br><span class="line">    <span class="keyword">if</span> <span class="keyword">not</span> isinstance(nets, list):</span><br><span class="line">        nets = [nets]</span><br><span class="line">    <span class="keyword">for</span> net <span class="keyword">in</span> nets:</span><br><span class="line">        <span class="keyword">if</span> net <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">            <span class="keyword">for</span> param <span class="keyword">in</span> net.parameters():</span><br><span class="line">                param.requires_grad = requires_grad</span><br></pre></td></tr></table></figure></p>
-<ul>
-<li>networks.py<br>实现了归一层，初始化函数以及optimization scheduler,如learning rate policy等。</li>
-</ul>
-<p>返回norm_layer:<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">get_norm_layer</span><span class="params">(norm_type=<span class="string">'instance'</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Return a normalization layer</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        norm_type (str, optional): The name of nomalization layer: batch | instance | none</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    For BatchNorm, we use learnable affine parameters and track running statistics (mean/stddev).</span></span><br><span class="line"><span class="string">    For InstanceNorm, we do not use learnable affine parameters. We do not track running statistics.</span></span><br><span class="line"><span class="string">    """</span>    </span><br><span class="line">    <span class="keyword">if</span> norm_type == <span class="string">'batch'</span>:</span><br><span class="line">        norm_layer = functools.partial(nn.BatchNorm2d, affine=<span class="keyword">True</span>, track_running_stats=<span class="keyword">True</span>)</span><br><span class="line">    <span class="keyword">elif</span> norm_type == <span class="string">'instance'</span>:</span><br><span class="line">        norm_layer = functools.partial(nn.InstanceNorm2d, affine=<span class="keyword">False</span>, track_running_stats=<span class="keyword">False</span>)</span><br><span class="line">    <span class="keyword">elif</span> norm_type == <span class="string">'None'</span>:</span><br><span class="line">        norm_layer = <span class="keyword">None</span></span><br><span class="line">    <span class="keyword">else</span>:</span><br><span class="line">        <span class="keyword">raise</span> NotImplementedError(<span class="string">'normalization layer [%s] is not fuound'</span> % norm_type)</span><br><span class="line">    <span class="keyword">return</span> norm_layer</span><br></pre></td></tr></table></figure></p>
-<p>其中functools.partial()是偏函数，用于产生冻结了某些参数的新函数，目的是不用在每次调用时都传入重复的参数。<br>对于track_running_stat的理解：<br>当设置为True时，running_mean 和running_var会跟踪不同batch数据的mean和variance，但是仍然是用每个batch的mean和variance做normalization。<br>当设置为False时，running_mean 和running_var不跟踪跨batch数据的statistics了，但仍然用每个batch的mean和variance做normalization。<br>而affine设置指定了仿射变换的参数是否可被学习和更新。</p>
-<p>返回scheduler：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">def get_scheduler(optimizer, opt):</span><br><span class="line">    &quot;&quot;&quot;Return a learning rate scheduler</span><br><span class="line"></span><br><span class="line">    Args:</span><br><span class="line">        optimizer : the optimizer of the network</span><br><span class="line">        opt (Option class): stores all the experiment flags; needs to be a subclass of BaseOptions．</span><br><span class="line">                            opt.lr_policy is the name of learning rate policy: linear | step | plateau | cosine</span><br><span class="line">    </span><br><span class="line">    For linear, we keep the same learning rate for the first  &lt;opt.niter&gt; epochs</span><br><span class="line">    and linearly decay the rate to zero over the next &lt;opt.niter_decay&gt; epochs.</span><br><span class="line">    For other schedulers(step, plateau, and cosine), we use the default Pytorch schedulers.</span><br><span class="line">    &quot;&quot;&quot;    </span><br><span class="line">    if opt.lr_policy == &apos;linear&apos;:</span><br><span class="line">        def lambda_rule(epoch):</span><br><span class="line">            lr_l = 1.0 - max(0, epoch + opt.epoch_count - opt.niter) / float(opt.niter_decay + 1)</span><br><span class="line">            return lr_l</span><br><span class="line">        scheduler = lr_scheduler.LambdaLR(optimizer, lr_lambda=lambda_rule)</span><br><span class="line">    elif opt.lr_policy == &apos;step&apos;:</span><br><span class="line">        scheduler = lr_scheduler.StepLR(optimizer, step_size=opt.lr_decay_iters, gamma=0.1)</span><br><span class="line">    elif opt.lr_policy == &apos;plateau&apos;:</span><br><span class="line">        scheduler = lr_scheduler.ReduceLROnPlateau(optimizer, mode=&apos;min&apos;, factor=0.2, threshold=0.01, patience=10)</span><br><span class="line">    elif opt.lr_policy == &apos;cosine&apos;:</span><br><span class="line">        scheduler = lr_scheduler.CosineAnnealingLR(optimizer, T_max=opt.niter, eta_min=0)</span><br><span class="line">    else:</span><br><span class="line">        return NotImplementedError(&apos;learning rate policy [%s] not found.&apos; % opt.lr_policy)</span><br><span class="line">    return scheduler</span><br></pre></td></tr></table></figure></p>
-<p>几种不同的更新学习率的规则，线性下降为自定义的lambda函数，其他的则通过pytorch接口实现。参考官方链接<a href="https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate" target="_blank" rel="noopener">https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate</a><br>学习率的调整应该放在optimizer更新之后，即先执行optimizer.step()再执行scheduler.step()。<br>关于optimizer：</p>
-<pre><code>1. 所有optimizer类都继承自torch.optim.Optimizer类
-2. 参数：params，需要优化的网络参数，传进来的网络参数必须是Iterable
-3. 属性：optimizer。defaults，字典，存放优化器的一些初始参数；optimizer.param_groups，列表，每个元素都是一个字典，其中包含的关键字params类是各个网络的参数放到了一起。
-</code></pre><p>值得注意的是，lr_scheduler更新optimizer的lr，是更新的optimizer.param_groups[n][‘lr’]，而不是optimizer.defaults[‘lr’]<br>lr_scheduler根据训练次数的调整策略：</p>
-<ul>
-<li><h3 id="torch-optim-lr-shceduler-LambdaLR"><a href="#torch-optim-lr-shceduler-LambdaLR" class="headerlink" title="torch.optim.lr_shceduler.LambdaLR:"></a>torch.optim.lr_shceduler.LambdaLR:</h3><p>更新策略：<br>  $$ newlr = \lambda * initiallr $$<br>其中new_lr是得到的新的学习率， initial_lr是初始的学习率，$\lambda$是根据lambda函数得到的。策略为：每一次epoch都更新lr，且乘数因子会根据epoch变化</p>
-</li>
-<li><h3 id="torch-optim-lr-scheduler-StepLR"><a href="#torch-optim-lr-scheduler-StepLR" class="headerlink" title="torch.optim.lr_scheduler.StepLR:"></a>torch.optim.lr_scheduler.StepLR:</h3><p>更新策略：<br>  $$ newlr = initiallr * \gamma^{epoch//step_size} $$<br>策略为：每过step_size个epooch，更新一次学习率，乘数因子不变。</p>
-</li>
-<li><h3 id="torch-optim-lr-scheduler-ReduceLROnPlateau"><a href="#torch-optim-lr-scheduler-ReduceLROnPlateau" class="headerlink" title="torch.optim.lr_scheduler.ReduceLROnPlateau"></a>torch.optim.lr_scheduler.ReduceLROnPlateau</h3><p>采取动态更新的策略，设置一个耐心值patience为没有改善的epoch数，若超过这个patience仍无改善则开始下降学习率，默认乘数因子为0.1</p>
-</li>
-<li><h3 id="torch-optim-lr-scheduler-CosineAnnealingLR"><a href="#torch-optim-lr-scheduler-CosineAnnealingLR" class="headerlink" title="torch.optim.lr_scheduler.CosineAnnealingLR"></a>torch.optim.lr_scheduler.CosineAnnealingLR</h3><p>使得lr变化类似于cos函数的变化</p>
-</li>
-</ul>
-<p>初始化网络，注册GPU并初始化网络权重：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_weights</span><span class="params">(net, init_type=<span class="string">'normal'</span>, init_gain=<span class="number">0.02</span>)</span>:</span></span><br><span class="line">    <span class="string">"""Initialize network weights</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        net (network): network to be initialized</span></span><br><span class="line"><span class="string">        init_type (str, optional): the name of initialization method: normal | xavier | kaiming | orthogonal.</span></span><br><span class="line"><span class="string">        init_gain (float, optional): scaling factor for normal, xavier, and orthogonal.</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    We use 'normal' in the original pix2pix and CycleGAN paper. But xavier and kaiming might</span></span><br><span class="line"><span class="string">    work better for some applications. Feel free to try yourself.</span></span><br><span class="line"><span class="string">    """</span>    </span><br><span class="line">    <span class="function"><span class="keyword">def</span> <span class="title">init_func</span><span class="params">(m)</span>:</span> <span class="comment"># define the initialization function</span></span><br><span class="line">        classname = m.__class__.__name__</span><br><span class="line">        <span class="keyword">if</span> hasattr(m, <span class="string">'weight'</span>) <span class="keyword">and</span> (classname.find(<span class="string">'Conv'</span>) != <span class="number">-1</span> <span class="keyword">or</span> classname.find(<span class="string">'Linear'</span>) != <span class="number">-1</span>):</span><br><span class="line">            <span class="keyword">if</span> init_type == <span class="string">'normal'</span>:</span><br><span class="line">                init.normal_(m.weight.data, <span class="number">0.0</span>, init_gain)</span><br><span class="line">            <span class="keyword">elif</span> init_type == <span class="string">'xavier'</span>:</span><br><span class="line">                init.xavier_normal_(m.weight.data, gain=init_gain)</span><br><span class="line">            <span class="keyword">elif</span> init_type == <span class="string">'kaiming'</span>:</span><br><span class="line">                init.kaiming_normal_(m.weight.data, a=<span class="number">0</span>, mode=<span class="string">'fan_in'</span>)</span><br><span class="line">            <span class="keyword">elif</span> init_type == <span class="string">'orthogonal'</span>:</span><br><span class="line">                init.orthogonal_(m.weight.data, gain=init_gain)</span><br><span class="line">            <span class="keyword">else</span>:</span><br><span class="line">                <span class="keyword">raise</span> NotImplementedError(<span class="string">'initialization method [%s] is not implemented'</span> % init_type)</span><br><span class="line">            <span class="keyword">if</span> hasattr(m, <span class="string">'bias'</span>) <span class="keyword">and</span> m.bias <span class="keyword">is</span> <span class="keyword">not</span> <span class="keyword">None</span>:</span><br><span class="line">                init.constant_(m.bias.data, <span class="number">0.0</span>)</span><br><span class="line">        <span class="keyword">elif</span> classname.find(<span class="string">'BatchNorm2d'</span>) != <span class="number">-1</span>: <span class="comment">#BatchNorm Layer's weight is not a matrix; only normal distribution applies.</span></span><br><span class="line">            init.normal_(m.weight.data, <span class="number">1.0</span>, init_gain)</span><br><span class="line">            init.constant_(m.bias.data, <span class="number">0.0</span>)</span><br><span class="line">    print(<span class="string">'initialize net work with %s'</span> % init_type)</span><br><span class="line">    net.apply(init_func) <span class="comment"># apply the initialization function &lt;init_func&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">init_net</span><span class="params">(net, init_type=<span class="string">'normal'</span>, init_gain=<span class="number">0.02</span>, gpu_ids=[])</span>:</span></span><br><span class="line">    <span class="string">"""Initialize a network: 1. register CPU/GPU device (with multi-GPU support); 2. initialize the network weights</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    Args:</span></span><br><span class="line"><span class="string">        net (Network): the network to be initialized</span></span><br><span class="line"><span class="string">        init_type (str, optional): the name of an initialization method.</span></span><br><span class="line"><span class="string">        init_gain (float, optional): scaling factor for normal, xavier and orthogonal.</span></span><br><span class="line"><span class="string">        gpu_ids (list, optional): which GPUs the network runs on.</span></span><br><span class="line"><span class="string">    </span></span><br><span class="line"><span class="string">    Return an initialized network.</span></span><br><span class="line"><span class="string">    """</span>    </span><br><span class="line">    <span class="keyword">if</span> len(gpu_ids) &gt; <span class="number">0</span>:</span><br><span class="line">        <span class="keyword">assert</span>(torch.cuda.is_available())</span><br><span class="line">        net.to(gpu_ids[<span class="number">0</span>])</span><br><span class="line">        net = torch.nn.DataParallel(net, gpu_ids)</span><br><span class="line">    init_weights(net, init_type, init_gain=init_gain)</span><br><span class="line">    <span class="keyword">return</span> net</span><br></pre></td></tr></table></figure></p>
-<p>其中初始化权重的方法主要有：</p>
-<ul>
-<li><h3 id="正态分布"><a href="#正态分布" class="headerlink" title="正态分布"></a>正态分布</h3>  使权重值服从正态分布N(mean, std),默认值为0,1</li>
-<li><h3 id="Xavier正态分布"><a href="#Xavier正态分布" class="headerlink" title="Xavier正态分布"></a>Xavier正态分布</h3>  是权重值服从截断正态分布N，其中：<br>  mean=0， std= gain * sqrt(2/(fan_in + fan_out))<br>  fan_in是权值张量中输入单位的数量，fan_out是输出单位的数量<br>  在Xavier中，正向传播时，激活值的方差保持不变；反向传播时，关于状态值的梯度的方差保持不变。</li>
-<li><h3 id="kaiming正态分布"><a href="#kaiming正态分布" class="headerlink" title="kaiming正态分布"></a>kaiming正态分布</h3><p>  kaiming的方法针对Xavier初始化方法在relu这一类非线性激活函数表现不佳而提出了改进。<br>  N~(0,std), std = sqrt(2/(1+a^2)*fan_in)<br>  正向传播时，状态值的方差保持不变；反向传播时，关于激活值的梯度的方差保持不变。</p>
-</li>
-<li><h3 id="orthogonal-正交-初始化"><a href="#orthogonal-正交-初始化" class="headerlink" title="orthogonal(正交)初始化"></a>orthogonal(正交)初始化</h3></li>
-</ul>
-
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/26/Cycle-GAN源码阅读笔记/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
       
 
       
       
-      <div class="clearfix"></div>
-    </div>
-    
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
-
-
-
-
-
-
+    
+      
 
   
-    <article id="post-hello-world" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2020/09/25/hello-world/" class="article-date">
-      <time datetime="2020-09-25T14:26:06.835Z" itemprop="datePublished">2020-09-25</time>
-</a>
 
-
-    </div>
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2020/09/25/hello-world/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/09/25/hello-world/">Hello World</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2020/09/25/hello-world/" itemprop="url">Hello World</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-09-25T22:26:06+08:00">
+                2020-09-25
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-              <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
 <h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2020/09/25/hello-world/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
       
 
       
       
-        <p class="article-more-link">
-          <a href="/2020/09/25/hello-world/#more">more >></a>
-        </p>
+        <div class="post-eof"></div>
       
-      <div class="clearfix"></div>
-    </div>
-    
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
-
-
-
-
-
-
+    
+      
 
   
-    <article id="post-Math-Model" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2019/01/09/Math-Model/" class="article-date">
-      <time datetime="2019-01-09T12:40:37.000Z" itemprop="datePublished">2019-01-09</time>
-</a>
 
-
-    </div>
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2019/01/09/Math-Model/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/01/09/Math-Model/">Math Model</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2019/01/09/Math-Model/" itemprop="url">Math Model</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-09T20:40:37+08:00">
+                2019-01-09
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-              <h1 id="线性规划（Linear-Programming）"><a href="#线性规划（Linear-Programming）" class="headerlink" title="线性规划（Linear Programming）"></a>线性规划（Linear Programming）</h1><h2 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h2><p>线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。<br>Matlab标准形式：</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="线性规划（Linear-Programming）"><a href="#线性规划（Linear-Programming）" class="headerlink" title="线性规划（Linear Programming）"></a>线性规划（Linear Programming）</h1><h2 id="线性规划"><a href="#线性规划" class="headerlink" title="线性规划"></a>线性规划</h2><p>线性规划问题是在一组线性约束条件的限制下，求一线性目标函数最大或最 小的问题。<br>Matlab标准形式：</p>
 <p>$$ min \quad  $$</p>
 <p>$$<br>s.t \quad \lbrace{ Ax &lt; b,<br>Aeq * x = beq,<br>lb \leq x \leq ub\rbrace}<br>$$<br>其中c和x为n 维列向量， A、 Aeq 为适当维数的矩阵，b 、beq为适当维数的列向量</p>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2019/01/09/Math-Model/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
       
+
+      
+
       
 
       
       
-        <p class="article-more-link">
-          <a href="/2019/01/09/Math-Model/#more">more >></a>
-        </p>
+        <div class="post-eof"></div>
       
-      <div class="clearfix"></div>
-    </div>
-    
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
-
-
-
-
-
-
+    
+      
 
   
-    <article id="post-HashSet与TreeSet浅析" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/28/HashSet与TreeSet浅析/" class="article-date">
-      <time datetime="2018-07-28T04:10:08.000Z" itemprop="datePublished">2018-07-28</time>
-</a>
 
-
-    </div>
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2018/07/28/HashSet与TreeSet浅析/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/HashSet与TreeSet浅析/">HashSet与TreeSet浅析</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/28/HashSet与TreeSet浅析/" itemprop="url">HashSet与TreeSet浅析</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-28T12:10:08+08:00">
+                2018-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-              <p>今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>今天来讲讲学到的Java Collection里两种数据结构：TreeSet与HashSet。</p>
 <h2 id="一-区别："><a href="#一-区别：" class="headerlink" title="一. 区别："></a>一. 区别：</h2><blockquote>
 <p>HastSet使用散列表进行存储，元素无序，允许为null<br>TreeSet是使用树结构来进行存储，元素按字符串顺序排序存储，元素不允许为null</p>
 </blockquote>
 <p>代码演示：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//HashSet</span></span><br><span class="line">Set set1 = <span class="keyword">new</span> HashSet();</span><br><span class="line">set1.add(<span class="string">"first"</span>);</span><br><span class="line">set1.add(<span class="string">"second"</span>);</span><br><span class="line">set1.add(<span class="string">"third"</span>);</span><br><span class="line">System.out.println(set1);</span><br><span class="line"><span class="comment">//输出结果：[third, first, second]</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//TreeSet</span></span><br><span class="line">Set set2 = <span class="keyword">new</span> TreeSet();</span><br><span class="line">set2.add(<span class="string">"first"</span>);</span><br><span class="line">set2.add(<span class="string">"second"</span>);</span><br><span class="line">set2.add(<span class="string">"third"</span>);</span><br><span class="line">set2.add(<span class="string">"forth"</span>);</span><br><span class="line">System.out.println(set2);</span><br><span class="line"><span class="comment">//输出结果：[first,forth, second, third]</span></span><br></pre></td></tr></table></figure></p>
-          
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/28/HashSet与TreeSet浅析/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Java/">Java</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/28/HashSet与TreeSet浅析/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
-
-
-
-
-
-
+    
+      
 
   
-    <article id="post-Git代码提交" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/28/Git代码提交/" class="article-date">
-      <time datetime="2018-07-28T04:07:20.000Z" itemprop="datePublished">2018-07-28</time>
-</a>
 
-
-    </div>
   
-  <div class="article-inner">
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2018/07/28/Git代码提交/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
     
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+      <header class="post-header">
+
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/28/Git代码提交/">Git代码提交</a>
-    </h1>
-  
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/28/Git代码提交/" itemprop="url">Git代码提交</a></h1>
+        
 
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-28T12:07:20+08:00">
+                2018-07-28
+              </time>
+            
+
+            
+
+            
+          </span>
+
           
-              <p>第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：</p>
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <p>第一次提交本地代码，首先得建立git目录（git环境安装好后，在目录下右键-打开git bash，在弹出的命令窗口中输入命令）：</p>
 <blockquote>
 <p>git init<br>git add .</p>
 </blockquote>
-          
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Git/">Git</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/28/Git代码提交/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-
-
-
-  
-    <article id="post-My-New-Post" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2018/07/26/My-New-Post/" class="article-date">
-      <time datetime="2018-07-26T02:30:44.000Z" itemprop="datePublished">2018-07-26</time>
-</a>
-
-
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/28/Git代码提交/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
         
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/07/26/My-New-Post/">My New Post</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-          
-              <h1 id="Windows下Django-Python3-使用Mysqlclient配置并连接Mysql"><a href="#Windows下Django-Python3-使用Mysqlclient配置并连接Mysql" class="headerlink" title="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql"></a>Windows下Django(Python3)使用Mysqlclient配置并连接Mysql</h1><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><p>之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。<br>版本： python 3.6.1， django 2.0.7</p>
-          
       
     </div>
     
-    <div class="article-info article-info-index">
-      
-      
-
-      
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-      
-        <p class="article-more-link">
-          <a href="/2018/07/26/My-New-Post/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
     
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
   </div>
   
-</article>
+  
+  
+  </article>
 
 
+    
+      
 
-
-
-
-
-
+  
 
   
   
-</div>
-      <footer id="footer">
-    <div class="outer">
-        <div id="footer-info">
-            <div class="footer-left">
-                <i class="fa fa-copyright"></i> 
-                2018-2020 Woo
-            </div>
-            <div class="footer-right">
-                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题  v3.5">Yelee</a> by MOxFIVE <i class="fa fa-heart animated infinite pulse"></i>
-            </div>
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.nia520.top/2018/07/26/My-New-Post/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="Woo">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/img/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">
+                
+                <a class="post-title-link" href="/2018/07/26/My-New-Post/" itemprop="url">My New Post</a></h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-07-26T10:30:44+08:00">
+                2018-07-26
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        
+          <h1 id="Windows下Django-Python3-使用Mysqlclient配置并连接Mysql"><a href="#Windows下Django-Python3-使用Mysqlclient配置并连接Mysql" class="headerlink" title="Windows下Django(Python3)使用Mysqlclient配置并连接Mysql"></a>Windows下Django(Python3)使用Mysqlclient配置并连接Mysql</h1><h3 id="版本说明"><a href="#版本说明" class="headerlink" title="版本说明"></a>版本说明</h3><p>之前一直都是用的内置的djangodb，数据保存在本地的一个slite文件里，但是项目开发要使用mysql这样的大型数据库了。查了一下网上的教程，大多直接import Mysqldb，但是我用的是python3（django2.0以上版本已经不支持py2了），找了一下还是有解决办法的。<br>版本： python 3.6.1， django 2.0.7</p>
+          <!--noindex-->
+          <div class="post-button text-center">
+            <a class="btn" href="/2018/07/26/My-New-Post/#more" rel="contents">
+              Read more &raquo;
+            </a>
+          </div>
+          <!--/noindex-->
+        
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+
+      
+
+      
+      
+        <div class="post-eof"></div>
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+    
+  </section>
+
+  
+
+
+          </div>
+          
+
+
+          
+
         </div>
         
-            <div class="visit">
-                
-                    <span id="busuanzi_container_site_pv" style='display:none'>
-                        <span id="site-visit" title="本站到访数"><i class="fa fa-user" aria-hidden="true"></i><span id="busuanzi_value_site_uv"></span>
-                        </span>
-                    </span>
-                
-                
-                    <span>| </span>
-                
-                
-                    <span id="busuanzi_container_page_pv" style='display:none'>
-                        <span id="page-visit"  title="本页阅读量"><i class="fa fa-eye animated infinite pulse" aria-hidden="true"></i><span id="busuanzi_value_page_pv"></span>
-                        </span>
-                    </span>
-                
-            </div>
-        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
     </div>
-</footer>
-    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
     
-<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.2.0/require.min.js"></script>
+    <div class="sidebar-inner">
 
-    <script>
-        $(document).ready(function() {
-            var iPad = window.navigator.userAgent.indexOf('iPad');
-            if (iPad > -1 || $(".left-col").css("display") === "none") {
-                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
-                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
-                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
-            }
-            else {
-                var backgroundnum = 5;
-                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
-                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
-            }
-        })
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/img/avatar.png"
+                alt="Woo" />
+            
+              <p class="site-author-name" itemprop="name">Woo</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">6</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">3</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">Woo</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
     </script>
-
-
-
-
 
     <script type="text/x-mathjax-config">
-MathJax.Hub.Config({
-    tex2jax: {
-        inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
-        processEscapes: true,
-        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
-    }
-});
-
-MathJax.Hub.Queue(function() {
-    var all = MathJax.Hub.getAllJax(), i;
-    for(i=0; i < all.length; i += 1) {
-        all[i].SourceElement().parentNode.className += ' has-jax';                 
-    }       
-});
-</script>
-
-<script src="//cdn.bootcss.com/mathjax/2.6.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-</script>
-
-
-<div class="scroll" id="scroll">
-    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
-    <a href="#comments" onclick="load$hide();" title="查看评论"><i class="fa fa-comments-o"></i></a>
-    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
-</div>
-<script>
-    // Open in New Window
-    
-        var oOpenInNew = {
-            
-            
-            
-            
-            
-            
-             archives: ".archive-article-title", 
-             miniArchives: "a.post-list-link", 
-            
-             friends: "#js-friends a", 
-             socail: ".social a" 
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
         }
-        for (var x in oOpenInNew) {
-            $(oOpenInNew[x]).attr("target", "_blank");
-        }
-    
-</script>
-
-    <script>
-        var originTitle = document.title;
-        var titleTime;
-        document.addEventListener("visibilitychange", function() {
-            if (document.hidden) {
-                document.title = "(つェ⊂) 我藏好了哦~ " + originTitle;
-                clearTimeout(titleTime);
-            }
-            else {
-                document.title = "(*´∇｀*) 被你发现啦~ " + originTitle;
-                titleTime = setTimeout(function() {
-                    document.title = originTitle;
-                }, 2000);
-            }
-        })
+      });
     </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
 
-<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
-</script>
-  </div>
-</body>
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":255,"height":540},"mobile":{"show":false},"log":false});</script></body>
 </html>
