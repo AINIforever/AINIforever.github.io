@@ -88,7 +88,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/ga_motivation.jpg">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/GA.png">
-<meta property="og:updated_time" content="2020-10-02T03:27:46.325Z">
+<meta property="og:updated_time" content="2020-10-02T03:40:16.232Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法初识">
 <meta name="twitter:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。 对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行随机“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，">
@@ -304,6 +304,7 @@
       
         <h2 id="什么是遗传算法（GA）？"><a href="#什么是遗传算法（GA）？" class="headerlink" title="什么是遗传算法（GA）？"></a>什么是遗传算法（GA）？</h2><p>大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为<strong>进化计算</strong>的更大的计算分支的子集。</p>
 <p>对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行<strong>随机</strong>“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，这符合自然选择学说的理论。在每一次迭代中都重复这一操作，直到迭代次数足够多或适应度函数收敛，算法终止。</p>
+<a id="more"></a>
 <p>在这一过程中，需要给出以下定义：</p>
 <ol>
 <li>总体(Population): 给定问题的所有当前候选解的集合，包含当前的父代个体和子代个体，并且每一次迭代后子代集取代父代集，并产生新的子代集，所以总体也随之更新。</li>
@@ -321,7 +322,8 @@
 </ul>
 <h2 id="算法流程图及伪代码"><a href="#算法流程图及伪代码" class="headerlink" title="算法流程图及伪代码"></a>算法流程图及伪代码</h2><img src="/2020/10/01/遗传算法初识/GA.png" title="遗传算法流程图">
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GA()</span><br><span class="line">   initialize population</span><br><span class="line">   find fitness of population</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">while</span> (termination criteria <span class="keyword">is</span> reached) do</span><br><span class="line">      parent selection</span><br><span class="line">      crossover <span class="keyword">with</span> probability pc</span><br><span class="line">      mutation <span class="keyword">with</span> probability pm</span><br><span class="line">      decode <span class="keyword">and</span> fitness calculation</span><br><span class="line">      survivor selection</span><br><span class="line">      find best</span><br><span class="line">   <span class="keyword">return</span> best</span><br></pre></td></tr></table></figure>
-<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>…</p>
+
       
     </div>
     
@@ -354,6 +356,10 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/02/遗传算法求解优化问题/" rel="prev" title="遗传算法求解优化问题">
+                遗传算法求解优化问题 <i class="fa fa-chevron-right"></i>
+              </a>
             
           </div>
         </div>
@@ -434,7 +440,7 @@
               
                 <a href="/archives/">
               
-                  <span class="site-state-item-count">7</span>
+                  <span class="site-state-item-count">8</span>
                   <span class="site-state-item-name">posts</span>
                 </a>
               </div>
