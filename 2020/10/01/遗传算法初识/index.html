@@ -79,17 +79,20 @@
 
 
 
-<meta name="description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，基于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。">
+<meta name="description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。 对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行随机“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，">
 <meta property="og:type" content="article">
 <meta property="og:title" content="遗传算法初识">
 <meta property="og:url" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/index.html">
 <meta property="og:site_name" content="Hexo">
-<meta property="og:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，基于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。">
+<meta property="og:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。 对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行随机“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2020-10-01T04:02:53.040Z">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/ga_motivation.jpg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/GA.png">
+<meta property="og:updated_time" content="2020-10-02T03:27:46.325Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法初识">
-<meta name="twitter:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，基于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。">
+<meta name="twitter:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。 对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行随机“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，">
+<meta name="twitter:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/ga_motivation.jpg">
 
 
 
@@ -299,8 +302,26 @@
       
 
       
-        <h2 id="什么是遗传算法（GA）？"><a href="#什么是遗传算法（GA）？" class="headerlink" title="什么是遗传算法（GA）？"></a>什么是遗传算法（GA）？</h2><p>大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，基于自然选择和遗传学的概念。遗传算法是称为<strong>进化计算</strong>的更大的计算分支的子集。</p>
-
+        <h2 id="什么是遗传算法（GA）？"><a href="#什么是遗传算法（GA）？" class="headerlink" title="什么是遗传算法（GA）？"></a>什么是遗传算法（GA）？</h2><p>大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为<strong>进化计算</strong>的更大的计算分支的子集。</p>
+<p>对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行<strong>随机</strong>“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，这符合自然选择学说的理论。在每一次迭代中都重复这一操作，直到迭代次数足够多或适应度函数收敛，算法终止。</p>
+<p>在这一过程中，需要给出以下定义：</p>
+<ol>
+<li>总体(Population): 给定问题的所有当前候选解的集合，包含当前的父代个体和子代个体，并且每一次迭代后子代集取代父代集，并产生新的子代集，所以总体也随之更新。</li>
+<li>染色体(): 问题的一个候选解。</li>
+<li>基因(): 染色体中单个元素的位置，基因值代表染色体在该位置的编码值。</li>
+<li>编码与解码(): 指基因的编码与解码。将每个个体的适应度值编码到二进制串中方便于变异，变异后每个个体通过解码来计算它的适应度值。</li>
+<li>适应度(): 衡量当前个体优劣的指标，通常也是求解问题需要优化的目标函数。</li>
+<li>遗传算子(): 包含交叉、变异和选择，用于模拟自然选择学说中“物竞天择，适者生存”的过程，也是整个算法的核心逻辑。</li>
+</ol>
+<h2 id="遗传算法的特点"><a href="#遗传算法的特点" class="headerlink" title="遗传算法的特点"></a>遗传算法的特点</h2><p>遗传算法具有足够的随机性，但是又优于传统的局部随机搜索，因为比起随机搜索，他利用了父代的遗传信息，并且在每次产生新解之前就经过了一次筛选。遗传算法的思想和梯度下降有相似的地方，都是通过当前解产生新解，并且使目标函数朝期望的方向收敛。但是梯度下降在多峰目标函数优化问题中存在明显的局限性，可能陷入局部最优解。而遗传算法随机初始化解的集合，会任意分布在可选区间中，并且每一代更新时都有几率变异，使得收敛偏离轨迹。这都使得遗传算法在一定程度上避免了局部最优解的问题。<br><img src="/2020/10/01/遗传算法初识/ga_motivation.jpg" title="梯度下降的局限"></p>
+<h2 id="具体操作算子"><a href="#具体操作算子" class="headerlink" title="具体操作算子"></a>具体操作算子</h2><ul>
+<li><h3 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a>交叉</h3>  从种群（总体）<strong>P</strong>中随机选择两个个体（染色体），交换两个染色体的部分基因，得到两个新的染色体；重复多次得到<strong>P′</strong>； </li>
+<li><h3 id="变异"><a href="#变异" class="headerlink" title="变异"></a>变异</h3>  对<strong>P′</strong>中的每个染色体，以给定的变异概率<strong>p = 1/n</strong>，调整染色体的每个位置上的基因编码， 得到中间群体<strong>P′′</strong>；</li>
+<li><h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3>  将中间群体<strong>P′′</strong>和种群<strong>P</strong>合并， 从并集中选择k个解，构成新的种群<strong>P</strong>，选择的方法：按适应度值的大小排序，选择适应度更优的部分；</li>
+</ul>
+<h2 id="算法流程图及伪代码"><a href="#算法流程图及伪代码" class="headerlink" title="算法流程图及伪代码"></a>算法流程图及伪代码</h2><img src="/2020/10/01/遗传算法初识/GA.png" title="遗传算法流程图">
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">GA()</span><br><span class="line">   initialize population</span><br><span class="line">   find fitness of population</span><br><span class="line">   </span><br><span class="line">   <span class="keyword">while</span> (termination criteria <span class="keyword">is</span> reached) do</span><br><span class="line">      parent selection</span><br><span class="line">      crossover <span class="keyword">with</span> probability pc</span><br><span class="line">      mutation <span class="keyword">with</span> probability pm</span><br><span class="line">      decode <span class="keyword">and</span> fitness calculation</span><br><span class="line">      survivor selection</span><br><span class="line">      find best</span><br><span class="line">   <span class="keyword">return</span> best</span><br></pre></td></tr></table></figure>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2>
       
     </div>
     
@@ -459,7 +480,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是遗传算法（GA）？"><span class="nav-number">1.</span> <span class="nav-text">什么是遗传算法（GA）？</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是遗传算法（GA）？"><span class="nav-number">1.</span> <span class="nav-text">什么是遗传算法（GA）？</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#遗传算法的特点"><span class="nav-number">2.</span> <span class="nav-text">遗传算法的特点</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#具体操作算子"><span class="nav-number">3.</span> <span class="nav-text">具体操作算子</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#交叉"><span class="nav-number">3.1.</span> <span class="nav-text">交叉</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#变异"><span class="nav-number">3.2.</span> <span class="nav-text">变异</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择"><span class="nav-number">3.3.</span> <span class="nav-text">选择</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#算法流程图及伪代码"><span class="nav-number">4.</span> <span class="nav-text">算法流程图及伪代码</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#总结"><span class="nav-number">5.</span> <span class="nav-text">总结</span></a></li></ol></div>
             
 
           </div>
