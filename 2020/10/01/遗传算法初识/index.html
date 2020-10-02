@@ -88,6 +88,7 @@
 <meta property="og:locale" content="default">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/ga_motivation.jpg">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/One-point-cross.png">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/Multi-point-cross.png">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/Uniform-cross.png">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/bit-flip.png">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/swap.png">
@@ -97,7 +98,7 @@
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/stochastic-universal.png">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/tournament-selection.png">
 <meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/01/遗传算法初识/GA.png">
-<meta property="og:updated_time" content="2020-10-02T11:52:49.465Z">
+<meta property="og:updated_time" content="2020-10-02T12:32:10.675Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="遗传算法初识">
 <meta name="twitter:description" content="什么是遗传算法（GA）？大自然一直是全人类灵感的重要来源。遗传算法（GA）是基于搜索的算法，它的灵感就来源于自然选择和遗传学的概念。遗传算法是称为进化计算的更大的计算分支的子集。 对于给定的问题，一般会有多个候选解。在遗传算法中，通过对候选解集进行随机“交叉”、“变异”等操作来产生新的候选解，并计算他们的适应度值，选取最优的候选子集，在这一过程中，适应度更好的个体拥有更高的交配（即交叉变异）概率，">
@@ -317,37 +318,37 @@
 <p>在这一过程中，需要给出以下定义：</p>
 <ol>
 <li>总体(Population): 给定问题的所有当前候选解的集合，包含当前的父代个体和子代个体，并且每一次迭代后子代集取代父代集，并产生新的子代集，所以总体也随之更新。</li>
-<li>染色体(): 问题的一个候选解。</li>
-<li>基因(): 染色体中单个元素的位置，基因值代表染色体在该位置的编码值。</li>
-<li>编码与解码(): 指基因的编码与解码。将每个个体的适应度值编码到二进制串中方便于变异，变异后每个个体通过解码来计算它的适应度值。</li>
-<li>适应度(): 衡量当前个体优劣的指标，通常也是求解问题需要优化的目标函数。</li>
-<li>遗传算子(): 包含交叉、变异和选择，用于模拟自然选择学说中“物竞天择，适者生存”的过程，也是整个算法的核心逻辑。</li>
+<li>染色体(Chromosomes): 问题的一个候选解。</li>
+<li>基因(Gene): 染色体中单个元素的位置，基因值代表染色体在该位置的编码值。</li>
+<li>编码与解码(Encode &amp; Decode): 指基因的编码与解码。将每个个体的适应度值编码到二进制串中方便于变异，变异后每个个体通过解码来计算它的适应度值。</li>
+<li>适应度(Fitness): 衡量当前个体优劣的指标，通常也是求解问题需要优化的目标函数。</li>
+<li>遗传算子(Genetic Operators): 包含交叉、变异和选择，用于模拟自然选择学说中“物竞天择，适者生存”的过程，也是整个算法的核心逻辑。</li>
 </ol>
 <h2 id="遗传算法的特点"><a href="#遗传算法的特点" class="headerlink" title="遗传算法的特点"></a>遗传算法的特点</h2><p>遗传算法具有足够的随机性，但是又优于传统的局部随机搜索，因为比起随机搜索，他利用了父代的遗传信息，并且在每次产生新解之前就经过了一次筛选。遗传算法的思想和梯度下降有相似的地方，都是通过当前解产生新解，并且使目标函数朝期望的方向收敛。但是梯度下降在多峰目标函数优化问题中存在明显的局限性，可能陷入局部最优解。而遗传算法随机初始化解的集合，会任意分布在可选区间中，并且每一代更新时都有几率变异，使得收敛偏离轨迹。这都使得遗传算法在一定程度上避免了局部最优解的问题。<br><img src="/2020/10/01/遗传算法初识/ga_motivation.jpg" title="梯度下降的局限"></p>
 <h2 id="具体操作算子"><a href="#具体操作算子" class="headerlink" title="具体操作算子"></a>具体操作算子</h2><ul>
 <li><h3 id="交叉"><a href="#交叉" class="headerlink" title="交叉"></a>交叉</h3><p>  从种群（总体）<strong>P</strong>中随机选择两个个体（染色体），交换两个染色体的部分基因，得到两个新的染色体；重复多次得到<strong>P′</strong>； </p>
 <ol>
-<li>单点交叉<br> 从父代染色体的某个随机位置开始，交换尾部基因来产生新的染色体： <img src="/2020/10/01/遗传算法初识/One-point-cross.png" title="单点交叉"></li>
-<li>多点交叉<br> 交换父代染色体的随意一段位置，而不仅限于尾部： </li>
-<li>均匀交叉<br> 不将基因片段化处理，而是独立处理每一个基因，新的染色体的每个基因都有一定概率继承父代1或父代2的相应基因，这样可以控制新的子代更偏向于遗传哪个父代个体： <img src="/2020/10/01/遗传算法初识/Uniform-cross.png" title="均匀交叉">
+<li>单点交叉(One-point crossover)<br> 从父代染色体的某个随机位置开始，交换尾部基因来产生新的染色体： <img src="/2020/10/01/遗传算法初识/One-point-cross.png" title="单点交叉"></li>
+<li>多点交叉(Multi-point crossover)<br> 交换父代染色体的随意一段位置，而不仅限于尾部： <img src="/2020/10/01/遗传算法初识/Multi-point-cross.png" title="多点交叉"></li>
+<li>均匀交叉(Uniform crossover)<br> 不将基因片段化处理，而是独立处理每一个基因，新的染色体的每个基因都有一定概率继承父代1或父代2的相应基因，这样可以控制新的子代更偏向于遗传哪个父代个体： <img src="/2020/10/01/遗传算法初识/Uniform-cross.png" title="均匀交叉">
 </li>
 </ol>
 </li>
 <li><h3 id="变异"><a href="#变异" class="headerlink" title="变异"></a>变异</h3><p>  对<strong>P′</strong>中的每个染色体，以给定的变异概率<strong>p = 1/n</strong>，调整染色体的每个位置上的基因编码， 得到中间群体<strong>P′′</strong>；</p>
 <ol>
-<li>位翻转变异<br> 适用于二进制编码的GA，随机或按特定规则将某些二进制位进行翻转： <img src="/2020/10/01/遗传算法初识/bit-flip.png" title="位翻转变异"></li>
-<li>随机重置<br> 位翻转的扩展，对于每个基因，随机将其值重置成允许值内的某一值。</li>
-<li>交换突变<br> 每次随机选定两个基因，然后交换他们的值： <img src="/2020/10/01/遗传算法初识/swap.png" title="交换突变"></li>
-<li>加扰突变<br> 对于某段基因，随机扰乱他们的排序： <img src="/2020/10/01/遗传算法初识/scramble.png" title="加扰突变"></li>
-<li>反转突变<br> 加扰突变的特殊情况，对于某段基因，将他们反向排序： <img src="/2020/10/01/遗传算法初识/inversion.png" title="反转突变"></li>
+<li>位翻转变异(Bit-flip mutation)<br> 适用于二进制编码的GA，随机或按特定规则将某些二进制位进行翻转： <img src="/2020/10/01/遗传算法初识/bit-flip.png" title="位翻转变异"></li>
+<li>随机重置(Random reset)<br> 位翻转的扩展，对于每个基因，随机将其值重置成允许值内的某一值。</li>
+<li>交换突变(Swap)<br> 每次随机选定两个基因，然后交换他们的值： <img src="/2020/10/01/遗传算法初识/swap.png" title="交换突变"></li>
+<li>加扰突变(Scamble)<br> 对于某段基因，随机扰乱他们的排序： <img src="/2020/10/01/遗传算法初识/scramble.png" title="加扰突变"></li>
+<li>反转突变(Inversion)<br> 加扰突变的特殊情况，对于某段基因，将他们反向排序： <img src="/2020/10/01/遗传算法初识/inversion.png" title="反转突变"></li>
 </ol>
 </li>
 <li><h3 id="选择"><a href="#选择" class="headerlink" title="选择"></a>选择</h3>  将中间群体<strong>P′′</strong>和种群<strong>P</strong>合并，从并集中选择k个解，构成新的种群<strong>P</strong>，选择的方法：按适应度值的大小排序，选择适应度更优的部分；<ol>
-<li>轮盘赌选择<br> 模拟轮盘赌，通过适应值高低来决定每一个个体在轮盘中所占的角度，每次选择时旋转一次轮盘，最后固定指针所指的区域对应的个体被选择。这是一个很自然的概率选择方法： <img src="/2020/10/01/遗传算法初识/roulette-wheel.png" title="轮盘赌选择"></li>
-<li>随机采样<br> 可以说是轮盘赌的扩展，区别在于固定点不止一个，每次可以选择多个个体： <img src="/2020/10/01/遗传算法初识/stochastic-universal.png" title="随机采样"></li>
-<li>锦标赛选择<br> 每次随机选择k个个体，比较他们的适应值，选出k个中最优的个体： <img src="/2020/10/01/遗传算法初识/tournament-selection.png" title="锦标赛选择"></li>
-<li>排序选择<br> 根据适应值的高低直接选择适应值高的，适用于在每个个体的适应值区分不大的情况。</li>
-<li>完全随机选择<br> 顾名思义，完全随机地选择个体，没有适应度值得依据，一般不采用此策略。</li>
+<li>轮盘赌选择(Roulette wheel)<br> 模拟轮盘赌，通过适应值高低来决定每一个个体在轮盘中所占的角度，每次选择时旋转一次轮盘，最后固定指针所指的区域对应的个体被选择。这是一个很自然的概率选择方法： <img src="/2020/10/01/遗传算法初识/roulette-wheel.png" title="轮盘赌选择"></li>
+<li>随机采样(Stochastic universal)<br> 可以说是轮盘赌的扩展，区别在于固定点不止一个，每次可以选择多个个体： <img src="/2020/10/01/遗传算法初识/stochastic-universal.png" title="随机采样"></li>
+<li>锦标赛选择(Tournament selection)<br> 每次随机选择k个个体，比较他们的适应值，选出k个中最优的个体： <img src="/2020/10/01/遗传算法初识/tournament-selection.png" title="锦标赛选择"></li>
+<li>排序选择(Rank selection)<br> 根据适应值的高低直接选择适应值高的，适用于在每个个体的适应值区分不大的情况。</li>
+<li>完全随机选择(Random selection)<br> 顾名思义，完全随机地选择个体，没有适应度值得依据，一般不采用此策略。</li>
 </ol>
 </li>
 </ul>
