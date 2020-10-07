@@ -1,0 +1,753 @@
+<!DOCTYPE html>
+
+
+
+  
+
+
+<html class="theme-next muse use-motion" lang="">
+<head>
+  <meta charset="UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1"/>
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+<meta http-equiv="Cache-Control" content="no-transform" />
+<meta http-equiv="Cache-Control" content="no-siteapp" />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link href="/lib/fancybox/source/jquery.fancybox.css?v=2.1.5" rel="stylesheet" type="text/css" />
+
+
+
+
+
+
+
+<link href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2" rel="stylesheet" type="text/css" />
+
+<link href="/css/main.css?v=5.1.4" rel="stylesheet" type="text/css" />
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=5.1.4">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=5.1.4">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=5.1.4" color="#222">
+
+
+
+
+
+  <meta name="keywords" content="CV," />
+
+
+
+
+
+
+
+
+
+
+<meta name="description" content="学习使用PIL，PIL用于基本的图像处理 123456from PIL import Imagefrom pylab import *sourceFileName = &quot;test.jpg&quot;avatar = Image.open(sourceFileName)imshow(avatar)show()  1print (avatar.format, avatar.size, avatar.mode)">
+<meta name="keywords" content="CV">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Python计算机视觉编程（一）图像基本操作">
+<meta property="og:url" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="学习使用PIL，PIL用于基本的图像处理 123456from PIL import Imagefrom pylab import *sourceFileName = &quot;test.jpg&quot;avatar = Image.open(sourceFileName)imshow(avatar)show()  1print (avatar.format, avatar.size, avatar.mode)">
+<meta property="og:locale" content="default">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_4_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_9_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_11_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_13_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_15_1.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_16_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_20_2.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_24_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_26_0.svg">
+<meta property="og:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_30_1.svg">
+<meta property="og:updated_time" content="2020-10-07T11:41:34.727Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Python计算机视觉编程（一）图像基本操作">
+<meta name="twitter:description" content="学习使用PIL，PIL用于基本的图像处理 123456from PIL import Imagefrom pylab import *sourceFileName = &quot;test.jpg&quot;avatar = Image.open(sourceFileName)imshow(avatar)show()  1print (avatar.format, avatar.size, avatar.mode)">
+<meta name="twitter:image" content="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_4_0.svg">
+
+
+
+<script type="text/javascript" id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Muse',
+    version: '5.1.4',
+    sidebar: {"position":"left","display":"post","offset":12,"b2t":false,"scrollpercent":false,"onmobile":false},
+    fancybox: true,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    duoshuo: {
+      userId: '0',
+      author: 'Author'
+    },
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+
+  <link rel="canonical" href="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/"/>
+
+
+
+
+
+  <title>Python计算机视觉编程（一）图像基本操作 | Hexo</title>
+  
+
+
+
+
+
+
+
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="default">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta ">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/"  class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">Hexo</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+      
+        <p class="site-subtitle"></p>
+      
+  </div>
+
+  <div class="site-nav-toggle">
+    <button>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+<nav class="site-nav">
+  
+
+  
+    <ul id="menu" class="menu">
+      
+        
+        <li class="menu-item menu-item-home">
+          <a href="/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-home"></i> <br />
+            
+            Home
+          </a>
+        </li>
+      
+        
+        <li class="menu-item menu-item-archives">
+          <a href="/archives/" rel="section">
+            
+              <i class="menu-item-icon fa fa-fw fa-archive"></i> <br />
+            
+            Archives
+          </a>
+        </li>
+      
+
+      
+    </ul>
+  
+
+  
+</nav>
+
+
+
+ </div>
+    </header>
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://www.banianshizhuzhu.top/2020/10/07/Python计算机视觉编程（一）图像基本操作/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="爱八年">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar1.jpg">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="Hexo">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">Python计算机视觉编程（一）图像基本操作</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2020-10-07T19:08:03+08:00">
+                2020-10-07
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <p>学习使用PIL，PIL用于基本的图像处理</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> PIL <span class="keyword">import</span> Image</span><br><span class="line"><span class="keyword">from</span> pylab <span class="keyword">import</span> *</span><br><span class="line">sourceFileName = <span class="string">"test.jpg"</span></span><br><span class="line">avatar = Image.open(sourceFileName)</span><br><span class="line">imshow(avatar)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_4_0.svg" alt="svg"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">print</span> (avatar.format, avatar.size, avatar.mode)</span><br></pre></td></tr></table></figure>
+<pre><code>JPEG (256, 256) RGB
+</code></pre><p>批量转换图片格式</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> os, sys</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> root, dirs, infiles <span class="keyword">in</span> os.walk(<span class="string">'./'</span>):</span><br><span class="line">    <span class="keyword">for</span> infile <span class="keyword">in</span> infiles:</span><br><span class="line">        f, e = os.path.splitext(infile)</span><br><span class="line">        outfile = f + <span class="string">".png"</span></span><br><span class="line">        <span class="keyword">if</span> infile != outfile:</span><br><span class="line">            <span class="keyword">try</span>:</span><br><span class="line">                Image.open(infile).save(outfile)</span><br><span class="line">            <span class="keyword">except</span> IOError:</span><br><span class="line">                print(<span class="string">"cannot convert"</span>, infile)</span><br></pre></td></tr></table></figure>
+<p>使用transpose()进行变形，使用paste()进行粘贴</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">image_transpose</span><span class="params">(image)</span>:</span></span><br><span class="line">    <span class="string">"""Return a transposed image</span></span><br><span class="line"><span class="string"></span></span><br><span class="line"><span class="string">    function:</span></span><br><span class="line"><span class="string">        switches the left and right part of the image</span></span><br><span class="line"><span class="string">        for the left part of the original instance, flips left and right and then make it upside down</span></span><br><span class="line"><span class="string">    """</span>    </span><br><span class="line">    xsize, ysize = image.size</span><br><span class="line">    xsizeLeft = xsize // <span class="number">2</span></span><br><span class="line">    </span><br><span class="line">    boxLeft = (<span class="number">0</span>,<span class="number">0</span>,xsizeLeft,ysize)</span><br><span class="line">    boxRight = (xsizeLeft,<span class="number">0</span>,xsize,ysize)</span><br><span class="line">    boxLeft_new = (<span class="number">0</span>,<span class="number">0</span>,xsize-xsizeLeft,ysize)</span><br><span class="line">    boxRight_new = (xsize-xsizeLeft,<span class="number">0</span>,xsize,ysize)</span><br><span class="line"></span><br><span class="line">    partLeft = image.crop(boxLeft).transpose(Image.FLIP_LEFT_RIGHT).transpose(Image.ROTATE_180)</span><br><span class="line">    partRight = image.crop(boxRight)</span><br><span class="line"></span><br><span class="line">    image.paste(partRight, boxLeft_new)</span><br><span class="line">    image.paste(partLeft, boxRight_new)</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> image</span><br><span class="line"></span><br><span class="line">avatar = Image.open(sourceFileName)</span><br><span class="line">avatar = image_transpose(avatar)</span><br><span class="line">avatar.show()</span><br><span class="line">avatar.save(<span class="string">"test2.png"</span>)</span><br><span class="line">imshow(avatar)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_9_0.svg" alt="svg"></p>
+<p>转灰度图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">avatar = Image.open(sourceFileName).convert(<span class="string">'L'</span>)</span><br><span class="line">avatar.show()</span><br><span class="line">imshow(avatar)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_11_0.svg" alt="svg"></p>
+<p>Matplotlib，用于绘图，描点、画线等</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#读取图像到数组中</span></span><br><span class="line">im = array(Image.open(sourceFileName))</span><br><span class="line">imshow(im)</span><br><span class="line">x = [<span class="number">100</span>,<span class="number">100</span>,<span class="number">200</span>,<span class="number">200</span>]</span><br><span class="line">y = [<span class="number">150</span>,<span class="number">200</span>,<span class="number">150</span>,<span class="number">200</span>]</span><br><span class="line"><span class="comment">#使用红色星状绘制点</span></span><br><span class="line">plot(x,y,<span class="string">'r*'</span>)</span><br><span class="line"><span class="comment"># 绘制连接两个点的线</span></span><br><span class="line">plot(x[<span class="number">1</span>:<span class="number">3</span>],y[<span class="number">1</span>:<span class="number">3</span>])</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_13_0.svg" alt="svg"></p>
+<p>图像轮廓和直方图</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#打开图像并转换为灰度图像</span></span><br><span class="line">im = array(Image.open(sourceFileName).convert(<span class="string">'L'</span>))</span><br><span class="line"><span class="comment">#新建一个图像</span></span><br><span class="line">figure()</span><br><span class="line"><span class="comment">#不使用颜色信息</span></span><br><span class="line">gray()</span><br><span class="line">contour(im, origin=<span class="string">'image'</span>)</span><br><span class="line">axis(<span class="string">'equal'</span>)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>(0.5, 255.5, 0.5, 255.5)
+</code></pre><p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_15_1.svg" alt="svg"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#利用hist绘制直方图</span></span><br><span class="line"><span class="comment">#hist只接受一维数组作为输入，用flatten方法将数组转化成一维数组</span></span><br><span class="line">hist(im.flatten(),<span class="number">128</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_16_0.svg" alt="svg"></p>
+<p>Numpy库</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#shape会打印出颜色通道的信息，转化为灰度图之后，shape为2维</span></span><br><span class="line">im = array(Image.open(sourceFileName))</span><br><span class="line">print(im.shape, im.dtype)</span><br><span class="line">im = array(Image.open(sourceFileName).convert(<span class="string">'L'</span>), <span class="string">'f'</span>)</span><br><span class="line">print(im.shape, im.dtype)</span><br></pre></td></tr></table></figure>
+<pre><code>(256, 256, 3) uint8
+(256, 256) float32
+</code></pre><p>灰度变换</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">from</span> numpy <span class="keyword">import</span> *</span><br><span class="line"></span><br><span class="line">im = array(Image.open(sourceFileName).convert(<span class="string">'L'</span>))</span><br><span class="line">print(int(im.min()), int(im.max()))</span><br><span class="line"><span class="comment">#对图像进行反向处理</span></span><br><span class="line">im2 = <span class="number">255</span> - im</span><br><span class="line">print(int(im2.min()), int(im2.max()))</span><br><span class="line"><span class="comment">#将图像像素变换到100-200区间</span></span><br><span class="line">im3 = im*(<span class="number">100.0</span>/<span class="number">255</span>) + <span class="number">100</span></span><br><span class="line">print(int(im3.min()), int(im3.max()))</span><br><span class="line"><span class="comment">#对像素求平方后得到的图像</span></span><br><span class="line">im4 = (im/<span class="number">255.0</span>)**<span class="number">2</span> * <span class="number">255.0</span></span><br><span class="line">print(int(im4.min()), int(im4.max()))</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line">gray()</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">221</span>)</span><br><span class="line">imshow(im)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">title(<span class="string">'original'</span>)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">222</span>)</span><br><span class="line">imshow(im2)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">title(<span class="string">'255-x'</span>)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">223</span>)</span><br><span class="line">imshow(im3)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">title(<span class="string">'x*(100.0/255) + 100'</span>)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">224</span>)</span><br><span class="line">imshow(im4)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">title(<span class="string">'(x/255.0)**2 * 255.0'</span>)</span><br></pre></td></tr></table></figure>
+<pre><code>29 233
+22 226
+111 191
+3 212
+
+
+
+
+
+Text(0.5, 1.0, &amp;#39;(x/255.0)**2 * 255.0&amp;#39;)
+</code></pre><p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_20_2.svg" alt="svg"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#array变换的相反操作可以用PIL的fromarray()函数来完成</span></span><br><span class="line">pil_im = Image.fromarray(im)</span><br><span class="line"><span class="comment">#如果之前的操作将uint8类型转化为其他类型，则需要将数据类型转换回来</span></span><br><span class="line">pil_im = Image.fromarray(uint8(im))</span><br></pre></td></tr></table></figure>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#图像缩放</span></span><br><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">imresize</span><span class="params">(im, sz)</span>:</span></span><br><span class="line">    pil_im = Image.fromarray(uint8(im))</span><br><span class="line">    <span class="keyword">return</span> array(pil_im.resize(sz))</span><br></pre></td></tr></table></figure>
+<p>直方图均衡化<br>将一幅图像的灰度直方图变平，使变换后的每个灰度值的分布概率都相同，是对灰度值做归一化的方法，可以增强图像的对比度。<br>变换函数：图像中像素值的累积分布函数（cdf），将像素值的范围映射到目标范围的归一化操作</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">histeq</span><span class="params">(im, nbr_bins=<span class="number">256</span>)</span>:</span></span><br><span class="line">    <span class="comment">#对图像进行直方图均衡化</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#计算图像的直方图</span></span><br><span class="line">    imhist, bins = histogram(im.flatten(), nbr_bins, normed=<span class="keyword">True</span>)</span><br><span class="line">    cdf = imhist.cumsum()</span><br><span class="line">    cdf = <span class="number">255</span>*cdf / cdf[<span class="number">-1</span>] <span class="comment">#归一化累积分布函数</span></span><br><span class="line"></span><br><span class="line">    <span class="comment">#使用累积分布函数的线性插值，计算新的像素值</span></span><br><span class="line">    im2 = interp(im.flatten(), bins[:<span class="number">-1</span>], cdf)</span><br><span class="line">    <span class="keyword">return</span> im2.reshape(im.shape), cdf</span><br><span class="line"></span><br><span class="line">im = array(Image.open(sourceFileName).convert(<span class="string">'L'</span>))</span><br><span class="line">im2, cdf = histeq(im)</span><br><span class="line"></span><br><span class="line">figure()</span><br><span class="line">subplot(<span class="number">221</span>)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">gray()</span><br><span class="line">imshow(im)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">222</span>)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">imshow(im2)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">223</span>)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">hist(im.flatten(), <span class="number">128</span>)</span><br><span class="line"></span><br><span class="line">subplot(<span class="number">224</span>)</span><br><span class="line">axis(<span class="string">'off'</span>)</span><br><span class="line">hist(im2.flatten(), <span class="number">128</span>)</span><br><span class="line">show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_24_0.svg" alt="svg"></p>
+<p>图像平均<br>图像平均是一种图像降噪的简单方法</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">compute_avarage</span><span class="params">(imlist)</span>:</span></span><br><span class="line">    <span class="comment"># 计算图像序列的平均图像</span></span><br><span class="line">    average_im = array(Image.open(imlist[<span class="number">0</span>]), <span class="string">'f'</span>)</span><br><span class="line">    <span class="keyword">for</span> imname <span class="keyword">in</span> imlist[<span class="number">1</span>:]:</span><br><span class="line">        <span class="keyword">try</span>:</span><br><span class="line">            average_im += array(Image.open(imname))</span><br><span class="line">        <span class="keyword">except</span>:</span><br><span class="line">            print(imname + <span class="string">'...skiped'</span>)</span><br><span class="line">        average_im /= len(imlist)</span><br><span class="line">    <span class="keyword">return</span> array(average_im, <span class="string">'uint8'</span>)</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> root, dirs, infiles <span class="keyword">in</span> os.walk(<span class="string">'./'</span>):</span><br><span class="line">    imshow(compute_avarage(infiles))</span><br><span class="line">    show()</span><br></pre></td></tr></table></figure>
+<p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_26_0.svg" alt="svg"></p>
+<p>主成分分析<br>PCA（Principle Component Analysis）是非常有用的降维技巧。PCA产生的投影矩阵可以被视为将原始坐标变换到现有的坐标系，坐标系中各个坐标按照重要性递减排列。<br>为了对数据进行PCA变换，需要使用flatten展开到一维空间。<br>将变平的图像堆积起来，可以得到一个矩阵，每一行表示一幅图像。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">def</span> <span class="title">PCA</span><span class="params">(X)</span>:</span></span><br><span class="line">    <span class="comment"># Input: 矩阵X，每一行为一条训练数据</span></span><br><span class="line">    <span class="comment"># Return: 投影矩阵、方差和均值</span></span><br><span class="line">    num_data, dim = X.shape</span><br><span class="line">    mean_X = X.mean(axis=<span class="number">0</span>)</span><br><span class="line">    X = X - mean_X</span><br><span class="line"></span><br><span class="line">    <span class="keyword">if</span> dim &gt; num_data: <span class="comment">#PCA使用紧致技巧</span></span><br><span class="line">        M = dot(X, X.T) <span class="comment"># 协方差矩阵</span></span><br><span class="line">        e, EV = linalg.eigh(M) <span class="comment"># 特征值和特征向量</span></span><br><span class="line">        tmp = dot(X.T, EV).T <span class="comment"># 紧致技巧</span></span><br><span class="line">        V = tmp[::<span class="number">-1</span>]</span><br><span class="line">        S = sqrt(e)[::<span class="number">-1</span>]</span><br><span class="line">        <span class="keyword">for</span> i <span class="keyword">in</span> range(V.shape[<span class="number">1</span>]):</span><br><span class="line">            V[:, i] /= S</span><br><span class="line">    <span class="keyword">else</span>: <span class="comment">#PCA使用SVD</span></span><br><span class="line">        U, S, V = linalg.svd(X)</span><br><span class="line">        V = V[:num_data] <span class="comment"># 仅返回钱num_data维的数据</span></span><br><span class="line">    <span class="keyword">return</span> V, S, mean_X</span><br></pre></td></tr></table></figure>
+<p>该函数首先通过减去每一维的均值将数据中心化，然后计算协方差矩阵对应最大特征值的特征向量。<br>如果数据个数小于向量的维数，不用SVD分解，而是计算维数更小的协方差矩阵的特征向量，通过仅计算对应前k最大特征值的特征向量，使PCA操作更快</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">import</span> pickle</span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> root, dirs, infiles <span class="keyword">in</span> os.walk(<span class="string">'./'</span>):</span><br><span class="line">    im = array(Image.open(infiles[<span class="number">0</span>]))</span><br><span class="line">    m, n = im.shape[:<span class="number">2</span>]</span><br><span class="line">    imnbr = len(infiles)</span><br><span class="line">    print(<span class="string">"The number of images is: %d"</span> % imnbr)</span><br><span class="line">    immatrix = array([array(Image.open(imname).convert(<span class="string">'L'</span>)).flatten() <span class="keyword">for</span> imname <span class="keyword">in</span> infiles], <span class="string">'f'</span>)</span><br><span class="line">    <span class="comment"># PCA降维</span></span><br><span class="line">    V, S, immean = PCA(immatrix)</span><br><span class="line"></span><br><span class="line">    figure()</span><br><span class="line">    gray()</span><br><span class="line">    subplot(<span class="number">241</span>)</span><br><span class="line">    axis(<span class="string">'off'</span>)</span><br><span class="line">    imshow(immean.reshape(m,n))</span><br><span class="line">    show()</span><br></pre></td></tr></table></figure>
+<pre><code>The number of images is: 5
+</code></pre><p><img src="/2020/10/07/Python计算机视觉编程（一）图像基本操作/python-cv_30_1.svg" alt="svg"></p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+      
+    </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/CV/" rel="tag"># CV</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2020/10/02/遗传算法求解优化问题/" rel="next" title="遗传算法求解优化问题">
+                <i class="fa fa-chevron-left"></i> 遗传算法求解优化问题
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2020/10/07/jupyter/python-cv/" rel="prev" title="">
+                 <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
+
+
+          </div>
+          
+
+
+          
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    
+    <div class="sidebar-inner">
+
+      
+
+      
+
+      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+              <img class="site-author-image" itemprop="image"
+                src="/images/avatar1.jpg"
+                alt="爱八年" />
+            
+              <p class="site-author-name" itemprop="name">爱八年</p>
+              <p class="site-description motion-element" itemprop="description"></p>
+          </div>
+
+          <nav class="site-state motion-element">
+
+            
+              <div class="site-state-item site-state-posts">
+              
+                <a href="/archives/">
+              
+                  <span class="site-state-item-count">10</span>
+                  <span class="site-state-item-name">posts</span>
+                </a>
+              </div>
+            
+
+            
+
+            
+              
+              
+              <div class="site-state-item site-state-tags">
+                
+                  <span class="site-state-item-count">4</span>
+                  <span class="site-state-item-name">tags</span>
+                
+              </div>
+            
+
+          </nav>
+
+          
+
+          
+
+          
+          
+
+          
+          
+
+          
+
+        </div>
+      </section>
+
+      
+
+      
+
+    </div>
+  </aside>
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">爱八年</span>
+
+  
+</div>
+
+
+  <div class="powered-by">Powered by <a class="theme-link" target="_blank" href="https://hexo.io">Hexo</a></div>
+
+
+
+  <span class="post-meta-divider">|</span>
+
+
+
+  <div class="theme-info">Theme &mdash; <a class="theme-link" target="_blank" href="https://github.com/iissnan/hexo-theme-next">NexT.Muse</a> v5.1.4</div>
+
+
+
+
+        
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+      </div>
+    
+
+    
+
+  </div>
+
+  
+
+<script type="text/javascript">
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+  
+  
+
+
+
+
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery/index.js?v=2.1.3"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fastclick/lib/fastclick.min.js?v=1.0.6"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/jquery_lazyload/jquery.lazyload.js?v=1.9.7"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/fancybox/source/jquery.fancybox.pack.js?v=2.1.5"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/three.min.js"></script>
+  
+
+  
+  
+    <script type="text/javascript" src="/lib/three/canvas_sphere.min.js"></script>
+  
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/utils.js?v=5.1.4"></script>
+
+  <script type="text/javascript" src="/js/src/motion.js?v=5.1.4"></script>
+
+
+
+  
+  
+
+  
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  <script type="text/javascript" src="/js/src/bootstrap.js?v=5.1.4"></script>
+
+
+
+  
+
+
+  
+
+
+
+
+	
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  
+
+  
+  
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Config({
+        tex2jax: {
+          inlineMath: [ ['$','$'], ["\\(","\\)"]  ],
+          processEscapes: true,
+          skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+        }
+      });
+    </script>
+
+    <script type="text/x-mathjax-config">
+      MathJax.Hub.Queue(function() {
+        var all = MathJax.Hub.getAllJax(), i;
+        for (i=0; i < all.length; i += 1) {
+          all[i].SourceElement().parentNode.className += ' has-jax';
+        }
+      });
+    </script>
+    <script type="text/javascript" src="//cdn.bootcss.com/mathjax/2.7.1/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+
+  
+
+  
+
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"/live2dw/assets/hijiki.model.json"},"display":{"position":"left","width":255,"height":540},"mobile":{"show":false},"log":false});</script></body>
+</html>
